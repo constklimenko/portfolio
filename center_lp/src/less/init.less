@@ -3,7 +3,22 @@
 @import "parts/mixins";
 
 html {
-  .clear()
+  .clear();
+  overflow-x: hidden;
+}
+
+.txt-36{
+  .font-xxl;
+  @media (max-width: @size-mobile){
+    .font-l;
+  }
+}
+
+.txt-18{
+  .font-m;
+  @media (max-width: @size-mobile){
+    .font-xs;
+  }
 }
 
 body {
@@ -19,6 +34,7 @@ body {
   background-color: @orange;
   color           : @white;
   text-align: center;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -111,6 +127,75 @@ body {
 
 /* nav ends */
 
+
+/* first  */
+
+.first{
+  .grid(50% 50%, auto);
+  .block(9.5%, 0);
+  position: relative;
+  @media (max-width: @size-mobile){
+    .grid(1fr 0);
+       
+  }
+  
+  
+  &__img{
+    height: 120%;
+    width:140%;
+    .bg-contain('img/header-img.png');
+    position: relative;
+    top: -35px;
+    right: -20px;
+  }
+  
+  &__text{    
+    .grid(1fr, 14.5vw 5.6em auto, 0 , 20px);
+    
+      @media (max-width: @size-mobile){
+        .grid(1fr, 1.5fr 1.2fr 1.1fr);
+        align-items: center;
+        justify-items: center;
+        
+      }
+    
+  }
+  
+  &__text-big{    
+    .txt-36;
+    align-self: end;
+  }
+  
+  &__text-small{   
+    .txt-18;
+  }
+  
+  &__link{
+    text-align: center;
+    vertical-align: middle
+  }
+  
+  &__buttons{
+    .grid(1fr 1fr);
+    align-items: center;
+    justify-items: center;
+    @media (max-width: @size-mobile){
+      .grid(1fr, 1fr 1fr);       
+    }
+  }
+  
+  &__grid{
+    padding-top: 59px;
+    .grid(0.65fr 1fr 1fr, 1fr 1fr, 0px, 0px);
+    
+    &__title{
+      font-size:28px;
+      color:@orange;
+    }
+  }
+}
+
+/* first ends */
 
 /* projects  ends*/
 .m-show {
