@@ -84,14 +84,14 @@ const ftp = require('vinyl-ftp');
 var config = {
     path: {
         less: 'center_lp/src/less/*.less',
-        html: 'center_lp/public/test-index.html',
+        html: 'center_lp/public/index.html',
 
     },
     output: {
         cssName: 'center_lp.css',
-        path: 'test/public',
-        path_file: 'center_lp/public/test-index.html',
-        path_file_css: 'center_lp/public/test.css',
+        path: 'center_lp/public',
+        path_file: 'center_lp/public/index.html',
+        path_file_css: 'center_lp/public/center_lp.css',
         newHtml: '/tmp/fz3temp-2'
     }
 }

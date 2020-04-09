@@ -4,9 +4,64 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Centr LP</title>
+  
+  <link rel="stylesheet" href="center_lp.css">
+  
+  <!-- Pixel Glass -->
+<style>
+  HTML {
+    background-repeat: no-repeat;
+    background-position:  50% 0;
+    background-size: 100%;
+    /* Mobile layout by default */
+    background-image: url( "img/MOBILE.jpg" );
+  }
+  
+  /* Desktop */
+  @media ( min-width: 960px ) {
+    HTML {
+      /* Desktop layout */
+      background-image: url( "img/HOME.jpg" );
+      background-size: 100%;
+      
+    }
+  }
+</style>
+<link href="/pixel-glass/styles.css" rel="stylesheet">
+<script src="/pixel-glass/script.js"></script>
+<!-- // Pixel Glass -->
 </head>
 <body>
+  
+  <nav class="nav">
+    <a href="/" class="logo"></a>
+    <a href="" class="nav__link m-hide">Портфолио</a>
+    <a href="" class="nav__link m-hide">Виды услуг</a>
+    <a href="" class="nav__link m-hide">Калькулятор</a>
+    <a href="" class="nav__link m-hide">Контакты</a>
+    <a href="" class="nav__phone"> +7 (905) 824 85 64 </a>
+    
+    <div class="nav__toggle m-show " onclick="toggleNav()">
+      <div class="nav__toggle__line"></div>
+      <div class="nav__toggle__line "></div>
+      <div class="nav__toggle__line "></div>
+  </div>
+  
+  <div class="nav__bottom m-hide">
+    <a href="" class="nav__link ">Портфолио</a>
+    <a href="" class="nav__link ">Виды услуг</a>
+    <a href="" class="nav__link ">Калькулятор</a>
+    <a href="" class="nav__link ">Контакты</a>
+    <div class="nav__cross m-show" onclick="toggleNav()">×</div>
+</div>
+  </nav>
 
+  <script>
+    function toggleNav() {
+        document.querySelector('.nav__bottom').classList.toggle('m-hide');
+
+    }
+</script>
 </body>
 </html>
