@@ -234,6 +234,10 @@ a:not([href]):not([tabindex]):focus {
   background: url(@url) no-repeat center/ cover;
 }
 
+.bg-100(@url, @x:0,@y:0,@size: 100%) {
+  background: url(@url) no-repeat @x @y/ @size;
+}
+
 .bg-cover(@url, @url2) {
   background: url(@url) no-repeat center/ cover,
     url(@url2) no-repeat center/ cover;
@@ -433,6 +437,15 @@ a:not([href]):not([tabindex]):focus {
   grid-template-rows   : @row;
   grid-row-gap         : @row-gap;
   grid-column-gap      : @col-gap;
+}
+
+.vertical-grid-dif(@arguments, @row-gap: 0) {
+  display              : grid;
+  grid-template-columns: 1fr;
+  grid-template-rows   : @arguments;
+  align-items          : center;
+  grid-row-gap         : @row-gap;
+  justify-items        : center;
 }
 
 .vertical-grid(@rows: 6) {
