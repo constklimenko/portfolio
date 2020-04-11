@@ -134,20 +134,23 @@ body {
   .grid(50% 50%, auto);
   .block(9.5%, 0);
   position: relative;
-  @media (max-width: @size-mobile){
+  @media (max-width: @size-tablete){
     .grid(1fr 0);
+    .bg-cover('img/header-mobile.png');
+  }
+  @media (min-width: @size-tablete){
+    &__img{
+      height: 120%;
+      width:140%;
+      .bg-contain('img/header-img.png');
+      position: relative;
+      top: -35px;
+      right: -20px;
+    }
        
   }
   
   
-  &__img{
-    height: 120%;
-    width:140%;
-    .bg-contain('img/header-img.png');
-    position: relative;
-    top: -35px;
-    right: -20px;
-  }
   
   &__text{    
     .grid(1fr, 14.5vw 5.6em auto, 0 , 20px);
