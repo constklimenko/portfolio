@@ -24,6 +24,13 @@ html {
   }
 }
 
+.txt-20{
+  .font-ml;
+  @media (max-width: @size-mobile){
+    .font-s;
+  }
+}
+
 .txt-18{
   .font-m;
   @media (max-width: @size-mobile){
@@ -56,6 +63,12 @@ body {
 .title{
   .txt-32;
   text-align: center
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-left: 2%;
 }
 
 /* nav */
@@ -198,6 +211,7 @@ body {
   
   &__link{
     text-align: center;
+    justify-self: center;
     vertical-align: middle;
     border-bottom:1px solid @black;
     
@@ -236,28 +250,72 @@ body {
 .projects {
   // .block(9.5%, 0);
   .bg-100('img/projects-back.svg');
-  .vertical-grid-dif( 300px auto, 50px);
+  .vertical-grid-dif( 300px auto auto, 50px);
+  position: relative;
   align-items          : end;
+  
+  &__nav {
+    position: absolute;
+    grid-row: ~"2/3";
+    align-self: start;
+    }
   
   &__slider{
     .block(9.5%, 0);
+    grid-row: ~"2/3";
+  }
+  
+  &__slider-nav{
+    grid-row: ~"2/3";
+    grid-column: ~"1/2";
   }
   
   &__grid{
-    .grid( 46vw 32vw, auto auto, 30px, 35px)!important;
+    .grid( 46vw 32vw, 478px auto, 30px, 35px)!important;
+    @media (max-width: @size-tablete) {
+      .grid(1fr, auto auto)
+    }
     
+    &--nav{
+      grid-template-rows:  minmax(478px, auto) 142px;
+    }
   }
   
   &__img{
     width:100%;
     height:auto;
+    border-radius: 5px;
   }
   
   &__text{
     background-color: @white;
      grid-row: ~"1/3";
      grid-column: ~"2/3";
+     padding: 5%;
   }
+}
+
+.text {
+background-color: @white;
+border-radius: 5px;
+
+
+
+&__title{
+  .txt-20;
+  font-weight: bold;
+}
+
+&__subtitle{
+  margin-top: 25px;
+}
+
+&__content{
+  
+ &>li:before{
+    content: "- ";
+  }
+}
 }
 
 /* projects  ends*/

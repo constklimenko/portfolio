@@ -1,74 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Centr LP</title>
-  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick.css" />
 
-<!-- <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/> -->
-  
+  <!-- <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/> -->
+
   <link rel="stylesheet" href="center_lp.css">
-  
+
   <!-- Pixel Glass -->
- 
-<style>
-  HTML {
-    background-repeat: no-repeat;
-    background-position:  50% 0;
-    background-size: 100%;
-    /* Mobile layout by default */
-    background-image: url( "img/MOBILE.jpg" );
-  }
-  
-  /* Desktop */
-  @media ( min-width: 960px ) {
+
+  <style>
     HTML {
-      /* Desktop layout */
-      background-image: url( "img/HOME.jpg" );
+      background-repeat: no-repeat;
+      background-position: 50% 0;
       background-size: 100%;
-      
+      /* Mobile layout by default */
+      background-image: url("img/MOBILE.jpg");
     }
-  }
-</style>
-<link href="/pixel-glass/styles.css" rel="stylesheet">
-<script src="/pixel-glass/script.js"></script> -->
-<!-- // Pixel Glass -->
+
+    /* Desktop */
+    @media (min-width: 960px) {
+      HTML {
+        /* Desktop layout */
+        background-image: url("img/HOME.jpg");
+        background-size: 100%;
+
+      }
+    }
+  </style>
+  <link href="/pixel-glass/styles.css" rel="stylesheet">
+  <script src="/pixel-glass/script.js"></script>
+  <!-- // Pixel Glass -->
 </head>
+
 <body>
-  
+
   <nav class="nav">
     <a href="/" class="logo"></a>
-  
+
     <a href="" class="nav__link m-hide">Портфолио</a>
     <a href="" class="nav__link m-hide">Виды услуг</a>
     <a href="" class="nav__link m-hide">Калькулятор</a>
     <a href="" class="nav__link m-hide">Контакты</a>
     <a href="" class="nav__phone"> +7 (905) 824 85 64 </a>
-    
+
     <div class="nav__toggle m-show " onclick="toggleNav()">
       <div class="nav__toggle__line"></div>
       <div class="nav__toggle__line "></div>
       <div class="nav__toggle__line "></div>
-  </div>
-  
-  <div class="nav__bottom m-show  m-hide">
-    <a href="" class="nav__link ">Портфолио</a>
-    <a href="" class="nav__link ">Виды услуг</a>
-    <a href="" class="nav__link ">Калькулятор</a>
-    <a href="" class="nav__link ">Контакты</a>
-    <div class="nav__cross m-show" onclick="toggleNav()">×</div>
-</div>
+    </div>
+
+    <div class="nav__bottom m-show  m-hide">
+      <a href="" class="nav__link ">Портфолио</a>
+      <a href="" class="nav__link ">Виды услуг</a>
+      <a href="" class="nav__link ">Калькулятор</a>
+      <a href="" class="nav__link ">Контакты</a>
+      <div class="nav__cross m-show" onclick="toggleNav()">×</div>
+    </div>
   </nav>
-  
+
   <section class="first">
-    <div class="first__text" >
-      <h2 class="first__text-big">Pассчитаем стоимость <nobr>дизайн-проекта</nobr> за <strong>1 час</strong> бесплатно</h2>
-      <div class="first__text-small">Создаем дизайн-проект интерьера под ключ для квартир, <nobr>домов и коммерческих </nobr> помещений в Тюмени и области </div>
+    <div class="first__text">
+      <h2 class="first__text-big">Pассчитаем стоимость <nobr>дизайн-проекта</nobr> за <strong>1 час</strong> бесплатно
+      </h2>
+      <div class="first__text-small">Создаем дизайн-проект интерьера под ключ для квартир, <nobr>домов и коммерческих
+        </nobr> помещений в Тюмени и области </div>
       <div class="first__buttons">
         <button class="button">Хочу рассчет</button>
-        <a href="" class="first__link" > Посмотреть портфолио </a>
+        <a href="" class="first__link"> Посмотреть портфолио </a>
       </div>
       <div class="first__grid t-hide">
         <div class="first__grid__title">7 лет</div>
@@ -79,64 +83,209 @@
         <div class="first__grid__cell">выполненных проектов</div>
       </div>
     </div>
-    <div class="first_bg" >
-      <div  alt="" class="first__img"></div>
+    <div class="first_bg">
+      <div alt="" class="first__img"></div>
     </div>
   </section>
-  
+
   <section class="projects">
     <h2 class="title">Посмотрите наши <br>
       <strong>лучшие проекты 2019</strong>
     </h2>
-    <div class="projects__slider"><div class="projects__grid">
-      <img src="img/photo1.jpg" alt="" class="projects__img">
-      <div class="projects__text">fafasf</div>
+    
+    <div class="projects__slider">
+      <div class="projects__grid">
+        <img src="img/photo1.jpg" alt="" class="projects__img">
+        <div class="projects__text text">
+
+          <h3 class="text__title">Трехкомнатная московская квартира 143 м. Теперь уже пятикомнатная.</h3>
+          <ul>
+            <li>
+              <h4 class="text__subtitle">Задача:</h4>
+
+              <p class="text__content">Спроектировать квартиру в ЛОФТ стилистике с тремя спальнями, просторной
+                кухней-гостиной. Квартира должна быть просторной и функциональной</p>
+            </li>
+            <li>
+              <h4 class="text__subtitle">Сложности: </h4>
+
+              <ul class="text__content">
+                <li>Уместить все необходимые помещения, сохранив при этом их функциональность и воздух</li>
+                <li>Установка кухни вдали от коммуникаций </li>
+                <li>Спроектировать гардеробные при каждой спальне</li>
+              </ul>
+              <h4 class="text__subtitle">Решение:</h4>
+
+        <p class="text__content">Опираясь на большой опыт проектирования пространств разной площади, мы решили уйти
+          от
+          традиционного расположения помещений вблизи коммуникаций. Кухню увели в центр квартиры, столовая зона
+          находится у лоджии. У каждого окошка квартиры расположили спальню, чтобы жилые помещения были освещены
+          максимально естественно. При этом у каждой спальни есть свой гардеробный уголок. Несмотря на общее
+          брутальное стилистическое настроение квартиры — мы предложили контрастное оформление плоскостей — от
+          темного
+          к светлому. Таким приемом мы смогли нагроможденную комнатами квартиру сделать светлой и просторной.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="projects__grid">
+        <img src="img/photo2.jpg" alt="" class="projects__img">
+        <div class="projects__text text">
+
+          <h3 class="text__title">LOREM IPSUM</h3>
+          <ul>
+            <li>
+              <h4 class="text__subtitle">Задача:</h4>
+
+              <p class="text__content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas id quae
+                aliquid repellendus ab, quia eius incidunt eos vel aspernatur, totam neque animi ad velit omnis
+                eveniet saepe ea officiis.</p>
+            </li>
+            <li>
+              <h4 class="text__subtitle">Сложности: </h4>
+
+              <ul class="text__content">
+                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis repudiandae mollitia suscipit
+                  quis inventore hic, voluptates deserunt repellat dolorum omnis totam obcaecati veritatis iste
+                  voluptate officiis, laboriosam doloribus! Tenetur, alias.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus repellat quas ipsam sed, optio
+                  reiciendis facere? Quaerat ratione dolore voluptatem repellat culpa odio, nisi eos voluptatibus
+                  vero minima voluptatum deserunt. </li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, ad repellendus placeat amet
+                  distinctio accusamus nam ut odit assumenda quod, pariatur blanditiis debitis. Quos similique
+                  aspernatur ad excepturi consectetur earum.</li>
+              </ul>
+            </li>
+          </ul>
+
+
+
+
+
+
+          <h4 class="text__subtitle">Решение:</h4>
+
+          <p class="text__content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat dolores
+            voluptatem minima eos iste minus dolor dolore, veritatis itaque adipisci excepturi natus nesciunt neque
+            temporibus. Velit, rerum minima. Fugit, eum.</p>
+        </div>
+      </div>
+      <div class="projects__grid">
+        <img src="img/photo3.jpg" alt="" class="projects__img">
+        <div class="projects__text text">
+          <h3 class="text__title">LOREM IPSUM</h3>
+          <ul>
+            <li>
+              <h4 class="text__subtitle">Задача:</h4>
+              <p class="text__content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas id quae
+                aliquid repellendus ab, quia eius incidunt eos vel aspernatur, totam neque animi ad velit omnis
+                eveniet saepe ea officiis.</p>
+            </li>
+            <li>
+              <h4 class="text__subtitle">Сложности: </h4>
+              <ul class="text__content">
+                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis repudiandae mollitia suscipit
+                  quis inventore hic, voluptates deserunt repellat dolorum omnis totam obcaecati veritatis iste
+                  voluptate officiis, laboriosam doloribus! Tenetur, alias.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus repellat quas ipsam sed, optio
+                  reiciendis facere? Quaerat ratione dolore voluptatem repellat culpa odio, nisi eos voluptatibus
+                  vero minima voluptatum deserunt. </li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, ad repellendus placeat amet
+                  distinctio accusamus nam ut odit assumenda quod, pariatur blanditiis debitis. Quos similique
+                  aspernatur ad excepturi consectetur earum.</li>
+              </ul>
+            </li>
+          </ul>
+          <h4 class="text__subtitle">Решение:</h4>
+          <p class="text__content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat dolores
+            voluptatem minima eos iste minus dolor dolore, veritatis itaque adipisci excepturi natus nesciunt neque
+            temporibus. Velit, rerum minima. Fugit, eum.</p>
+        </div>        
+      </div>  
+      <div class="projects__grid">
+        <img src="img/photo4.jpg" alt="" class="projects__img">
+        <div class="projects__text text">
+          <h3 class="text__title">LOREM IPSUM</h3>
+          <ul>
+            <li>
+              <h4 class="text__subtitle">Задача:</h4>
+              <p class="text__content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas id quae
+                aliquid repellendus ab, quia eius incidunt eos vel aspernatur, totam neque animi ad velit omnis
+                eveniet saepe ea officiis.</p>
+            </li>
+            <li>
+              <h4 class="text__subtitle">Сложности: </h4>
+              <ul class="text__content">
+                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis repudiandae mollitia suscipit
+                  quis inventore hic, voluptates deserunt repellat dolorum omnis totam obcaecati veritatis iste
+                  voluptate officiis, laboriosam doloribus! Tenetur, alias.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus repellat quas ipsam sed, optio
+                  reiciendis facere? Quaerat ratione dolore voluptatem repellat culpa odio, nisi eos voluptatibus
+                  vero minima voluptatum deserunt. </li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, ad repellendus placeat amet
+                  distinctio accusamus nam ut odit assumenda quod, pariatur blanditiis debitis. Quos similique
+                  aspernatur ad excepturi consectetur earum.</li>
+              </ul>
+            </li>
+          </ul>
+          <h4 class="text__subtitle">Решение:</h4>
+          <p class="text__content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat dolores
+            voluptatem minima eos iste minus dolor dolore, veritatis itaque adipisci excepturi natus nesciunt neque
+            temporibus. Velit, rerum minima. Fugit, eum.</p>
+        </div>        
+      </div>   
     </div>
-  
-    <div class="projects__grid">
-      <img src="img/header-img.png" alt="" class="projects__img">
-      <div class="projects__text">fafasf</div>
+    
+    <div class="projects__nav t-hide">
+      <div class="projects__grid projects__grid--nav">
+        <div class="projects__slider-nav">
+          <img src="img/photo1.jpg" alt="" >
+          <img src="img/photo2.jpg" alt="" >
+          <img src="img/photo3.jpg" alt="" >
+          <img src="img/photo4.jpg" alt="" >
+        </div>
+      </div>
     </div>
-  </div>
-    
-    
-    
+
+
+
   </section>
 
   <script>
     function toggleNav() {
-        document.querySelector('.nav__bottom').classList.toggle('m-hide');
+      document.querySelector('.nav__bottom').classList.toggle('m-hide');
 
     }
   </script>
 
 
-<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="slick/slick.min.js"></script>
+  <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
 
-<script>
-  $(document).ready(function(){
-    $('.projects__slider').slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  infinite: true,
-  arrows: false,
-  fade: true,
-  asNavFor: '.slider-nav'
-});
-$('.slider-nav').slick({
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  infinite: true,
-  arrows: true,
-  asNavFor: '.projects__slider',
-  dots: true,
-  centerMode: false,
-  focusOnSelect: true
-});
-});
-</script>
+  <script>
+    $(document).ready(function () {
+      $('.projects__slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        arrows: false,
+        fade: true,
+        // asNavFor: '.projects__slider-nav'
+      });
+      $('.projects__slider-nav').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        infinite: true,
+        arrows: true,
+        asNavFor: '.projects__slider',
+        dots: false,
+        centerMode: false,
+        focusOnSelect: true
+      });
+    });
+  </script>
 
 </body>
+
 </html>
