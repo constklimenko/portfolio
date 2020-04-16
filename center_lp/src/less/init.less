@@ -70,13 +70,14 @@ body {
 
 
 .nav {
-  .block();
+  .block(9.5%, 2px);
+  padding-top: 28px;
   .font-s-600;
   min-height: 75px;
   box-sizing: border-box;
   position: sticky;
   background-color: @white;
-  top:0;
+  top:-22px;
   z-index: 10;
   .grid(11%  repeat(4, minmax(max-content, 1.2fr))  minmax(max-content, 40%), 45px, 4.4% );
   align-content: center;
@@ -153,6 +154,7 @@ body {
 .first{
   .grid(50% 50%, auto);
   .block(9.5%, 0);
+  padding-top: 28px;
   
   @media (max-width: @size-tablete){
     .grid(1fr 0);
