@@ -118,7 +118,7 @@ gulp.task('less', function () {
         .pipe(less())
         .pipe(concat(config.output.cssName))
         .pipe(authoprefixer())
-        // .pipe(cleanCss())
+        .pipe(cleanCss())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(config.output.path))
         .pipe(browserSync.stream());

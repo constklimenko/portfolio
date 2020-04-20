@@ -38,6 +38,13 @@ html {
   }
 }
 
+.txt-16{
+  .font-s;
+  @media (max-width: @size-mobile){
+    font-size: 12px;
+  }
+}
+
 body {
   font-family: @font-family;
   color      : @black;
@@ -108,9 +115,9 @@ ul {
   
   &__phone{
     text-align: right;
-    .font-m-600;
+    .txt-16;
   @media (max-width: @size-mobile) {
-    
+    padding-left: 45px;
   }
   }
   
@@ -171,6 +178,7 @@ ul {
   
   @media (max-width: @size-tablete){
     .grid(1fr 0);
+    
     .bg-cover('img/header-mobile.png');
   }
   @media (min-width: @size-tablete){
@@ -192,7 +200,7 @@ ul {
     .grid(1fr, 14.5vw 5.6em auto, 0 , 20px);
     
       @media (max-width: @size-mobile){
-        .grid(1fr, 1.5fr 1.2fr 1.1fr);
+        .grid(1fr, 1.35fr 0.8fr 1.1fr, 0, 0);
         align-items: center;
         justify-items: center;
         
@@ -210,6 +218,7 @@ ul {
   }
   
   &__link{
+    .txt-18;
     text-align: center;
     justify-self: center;
     vertical-align: middle;
@@ -228,6 +237,7 @@ ul {
     align-items: center;
     justify-items: start;
     @media (max-width: @size-mobile){
+      padding-top: 16.5px;
       .grid(1fr, 1fr 1fr);       
     }
   }
@@ -253,6 +263,10 @@ ul {
   .vertical-grid-dif( 300px auto auto, 50px);
   position: relative;
   align-items          : end;
+  @media (max-width: @size-tablete){
+    display: block;
+    
+  }
   
   &__nav {
     position: absolute;
@@ -272,10 +286,7 @@ ul {
   
   &__grid{
     .grid( 46vw 32vw, 478px auto, 30px, 35px)!important;
-    @media (max-width: @size-tablete) {
-      .grid(1fr, auto auto)
-    }
-    
+    width: 100%;
     &--nav{
       grid-template-rows:  minmax(478px, auto) 142px;
     }
@@ -293,6 +304,19 @@ ul {
      grid-column: ~"2/3";
      padding: 5%;
   }
+  
+  @media (max-width: @size-tablete) {
+    &__grid{
+      grid-template-columns: 90vw!important;
+      grid-template-rows: auto!important;
+    }
+    
+     &__text{
+      grid-row: 2;
+      grid-column: 1;
+    }
+  }
+  
 }
 
 .text {
