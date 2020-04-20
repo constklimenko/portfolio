@@ -76,6 +76,11 @@ body {
   text-align: center
 }
 
+.subtitle{
+  .txt-18;
+  text-align: center
+}
+
 ul {
   list-style-type: none;
   padding: 0;
@@ -262,15 +267,16 @@ ul {
 
 /* projects  */
 .projects {
-  // .block(9.5%, 0);
+  padding-bottom: 150px;
   .bg-100('img/projects-back.svg');
   .vertical-grid-dif( 300px auto auto, 50px);
   position: relative;
   align-items          : end;
   @media (max-width: @size-tablete){
     display: block;
+    // background-size: 900% 100% ;
     padding-top: 87px;
-    
+    padding-bottom: 0px;
   }
   
   &__nav {
@@ -366,6 +372,26 @@ border-radius: 5px;
 }
 
 /* projects  ends*/
+
+/* contact  */
+
+.contact{
+  
+  width:1048;
+  height:489;
+  margin: auto;
+  
+  @media (max-width: @size-tablete) {
+    width:90%;
+  height:auto;
+  }
+  
+  &__form {
+    .grid(repeat(3,1fr))
+  }
+}
+
+/* contact  ends*/
 .m-show {
   @media (min-width: @size-mobile + 1) {
     display: none;
@@ -382,4 +408,8 @@ border-radius: 5px;
   @media (max-width: @size-tablete) {
     display: none;
   }
+}
+
+.span {
+  grid-column: span 3;
 }
