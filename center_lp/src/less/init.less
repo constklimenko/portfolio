@@ -60,6 +60,10 @@ body {
   color           : @white;
   text-align: center;
   cursor: pointer;
+  @media (max-width: @size-mobile){
+    width: 250px;
+  height: 40px;
+  }
 }
 
 .button:hover {
@@ -115,7 +119,7 @@ ul {
   
   &__phone{
     text-align: right;
-    .txt-16;
+    .txt-18;
   @media (max-width: @size-mobile) {
     padding-left: 45px;
   }
@@ -200,7 +204,7 @@ ul {
     .grid(1fr, 14.5vw 5.6em auto, 0 , 20px);
     
       @media (max-width: @size-mobile){
-        .grid(1fr, 1.35fr 0.8fr 1.1fr, 0, 0);
+        .grid(1.8fr, 1.45fr 1fr 1.04fr, 0, 0);
         align-items: center;
         justify-items: center;
         
@@ -218,7 +222,7 @@ ul {
   }
   
   &__link{
-    .txt-18;
+    .txt-16;
     text-align: center;
     justify-self: center;
     vertical-align: middle;
@@ -265,6 +269,7 @@ ul {
   align-items          : end;
   @media (max-width: @size-tablete){
     display: block;
+    padding-top: 87px;
     
   }
   
@@ -273,6 +278,24 @@ ul {
     grid-row: ~"2/3";
     align-self: start;
     }
+    
+  &__arrow-right, &__arrow-left {
+    .bg-cover('img/arrow.svg');
+    width: 14px;
+    height: 25px;
+    position: absolute;
+    top: 16vw;
+     cursor: pointer; 
+  }
+  
+  &__arrow-left{
+    left: -40px;
+    transform: rotate(180deg);  
+  }
+  
+  &__arrow-right{
+    right: -40px;  
+  }
   
   &__slider{
     .block(9.5%, 0);

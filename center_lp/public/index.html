@@ -66,7 +66,7 @@
 
   <section class="first">
     <div class="first__text">
-      <h2 class="first__text-big">Pассчитаем стоимость <nobr>дизайн-проекта</nobr> за <strong>1 час</strong> бесплатно
+      <h2 class="first__text-big">Pассчитаем стоимость <nobr>дизайн-проекта за <strong>1 час</strong> бесплатно</nobr>
       </h2>
       <div class="first__text-small">Создаем дизайн-проект интерьера под ключ для квартир, <nobr>домов и коммерческих
         </nobr> помещений в Тюмени и области </div>
@@ -95,7 +95,7 @@
     
     <div class="projects__slider">
       <div class="projects__grid">
-        <img src="img/photo1.jpg" alt="" class="projects__img">
+        <img data-lazy="img/photo1.jpg" alt="" class="projects__img">
         <div class="projects__text text">
 
           <h3 class="text__title">Трехкомнатная московская квартира 143 м. Теперь уже пятикомнатная.</h3>
@@ -171,7 +171,7 @@
         </div>
       </div>
       <div class="projects__grid">
-        <img src="img/photo3.jpg" alt="" class="projects__img">
+        <img data-lazy="img/photo3.jpg" alt="" class="projects__img">
         <div class="projects__text text">
           <h3 class="text__title">LOREM IPSUM</h3>
           <ul>
@@ -203,7 +203,39 @@
         </div>        
       </div>  
       <div class="projects__grid">
-        <img src="img/photo4.jpg" alt="" class="projects__img">
+        <img data-lazy="img/photo3.jpg" alt="" class="projects__img">
+        <div class="projects__text text">
+          <h3 class="text__title">LOREM IPSUM</h3>
+          <ul>
+            <li>
+              <h4 class="text__subtitle">Задача:</h4>
+              <p class="text__content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas id quae
+                aliquid repellendus ab, quia eius incidunt eos vel aspernatur, totam neque animi ad velit omnis
+                eveniet saepe ea officiis.</p>
+            </li>
+            <li>
+              <h4 class="text__subtitle">Сложности: </h4>
+              <ul class="text__content">
+                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis repudiandae mollitia suscipit
+                  quis inventore hic, voluptates deserunt repellat dolorum omnis totam obcaecati veritatis iste
+                  voluptate officiis, laboriosam doloribus! Tenetur, alias.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus repellat quas ipsam sed, optio
+                  reiciendis facere? Quaerat ratione dolore voluptatem repellat culpa odio, nisi eos voluptatibus
+                  vero minima voluptatum deserunt. </li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, ad repellendus placeat amet
+                  distinctio accusamus nam ut odit assumenda quod, pariatur blanditiis debitis. Quos similique
+                  aspernatur ad excepturi consectetur earum.</li>
+              </ul>
+            </li>
+          </ul>
+          <h4 class="text__subtitle">Решение:</h4>
+          <p class="text__content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat dolores
+            voluptatem minima eos iste minus dolor dolore, veritatis itaque adipisci excepturi natus nesciunt neque
+            temporibus. Velit, rerum minima. Fugit, eum.</p>
+        </div>        
+      </div>  
+      <div class="projects__grid">
+        <img data-lazy="img/photo4.jpg" alt="" class="projects__img">
         <div class="projects__text text">
           <h3 class="text__title">LOREM IPSUM</h3>
           <ul>
@@ -237,10 +269,14 @@
     </div>
     
     <div class="projects__nav t-hide">
+      
+      <div class="projects__arrow-left"></div>
+      <div class="projects__arrow-right"></div>
       <div class="projects__grid projects__grid--nav">
         <div class="projects__slider-nav">
           <img src="img/photo1.jpg" alt="" >
           <img src="img/photo2.jpg" alt="" >
+          <img src="img/photo1.jpg" alt="">
           <img src="img/photo3.jpg" alt="" >
           <img src="img/photo4.jpg" alt="" >
         </div>
@@ -269,19 +305,27 @@
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
-        arrows: false,
+        arrows: true,
+        prevArrow: '.projects__arrow-left',
+        nextArrow: '.projects__arrow-right',
         fade: true,
-        // asNavFor: '.projects__slider-nav'
+        lazyLoad: 'ondemand',
+        asNavFor: '.projects__slider-nav'
       });
       $('.projects__slider-nav').slick({
         slidesToShow: 4,
+        
+        
         slidesToScroll: 1,
         infinite: true,
-        arrows: true,
+        arrows: false,
         asNavFor: '.projects__slider',
         dots: false,
         centerMode: false,
-        focusOnSelect: true
+        
+        focusOnSelect: true,
+        
+
       });
     });
   </script>
