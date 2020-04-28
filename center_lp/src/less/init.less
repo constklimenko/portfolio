@@ -17,7 +17,7 @@ html {
   .font-xxl;
 
   @media (max-width: @size-mobile) {
-    .font-l;
+    .font-m;
   }
 }
 
@@ -239,13 +239,11 @@ ul {
 
   @media (max-width: @size-tablete) {
     .grid(1fr 0);
-
     .bg-cover('img/header-mobile.png');
   }
 
   @media (min-width: @size-tablete) {
     position: relative;
-
     &__img {
       height: 120%;
       width : 140%;
@@ -254,18 +252,16 @@ ul {
       top     : -65px;
       right   : -20px;
     }
-
   }
 
-
-
   &__text {
-    .grid(1fr, 14.5vw 5.6em auto, 0, 20px);
+    .grid(1fr, 14.5vw 5.6em auto, 0, 20px);  
 
     @media (max-width: @size-mobile) {
       .grid(1.8fr, 1.45fr 1fr 1.04fr, 0, 0);
       align-items  : center;
       justify-items: center;
+      color: @white;
 
     }
 
@@ -274,6 +270,7 @@ ul {
   &__text-big {
     .txt-36;
     align-self: end;
+    max-width: 100%;
   }
 
   &__text-small {
@@ -455,6 +452,7 @@ ul {
     .grid(1f 1fr 1.1fr, 1fr 1fr 1fr,30px,23px);
     position: relative;
     align-items: end;
+   
   }
 
   .circle {
@@ -464,23 +462,35 @@ ul {
   }
 
   .circle1 {
-    width : 100px;
-    height: 100px;
-    top: -12.1vw;
-    left: -1.5vw;
+    .r-size(320px,320 ,1440 , 40px, 40, 100);
+    
+    width : var(--return);
+    height: var(--return);
+    top: calc(-1.8 * var(--return));
+    left: calc(-0.2 * var(--return));
+    @media (max-width: @size-mobile){        
+        top: -20.5vw;
+        left: -8.5vw;
+    }
   }
   
   .circle2 {
-    width : 62px;
-    height: 62px;
-    top: -8.1vw;
-    left: 8.4vw;
+    .r-size(320px,320 ,1440 , 20px, 20, 62);
+    
+    width : var(--return);
+    height: var(--return);  
+    
+    left: calc(2 * var(--return));
+    top:calc(-1.9 * var(--return));
   }
   .circle3 {
-    width : 45px;
-    height: 45px;
-    bottom: -7.7vw;
-    right: 1.4vw;
+    .r-size(320px,320 ,1440 , 23px, 23, 45);
+    
+    width : var(--return);
+    height: var(--return);
+    
+    bottom: calc(-2.1 * var(--return));
+    right: calc(-0.8 * var(--return));
 
   }
   
@@ -496,30 +506,20 @@ ul {
     padding-top: 120px;
     
     &__form{
-      display: block;
+      .grid(1fr, 0.9fr 1fr 1fr 1.5fr ,30px,13px);
+      align-items: center;
+      justify-items: center;
+    }
+    
+    &__text{
+      grid-column: 1;
     }
     
     .button{
       position: static;
     }
-
-    .circle1 {
-      width : 40px;
-      height: 40px;
-    }
-    
-    .circle2 {
-      width : 20px;
-      height: 20px;
-    }
-    
-    .circle3 {
-      width : 23px;
-      height: 23px;
-    }
-
   }
-
+  
 }
 
 /* contact  ends*/
@@ -533,13 +533,21 @@ ul {
   .vertical-grid-dif(150px auto auto, 50px);
   position   : relative;
   align-items: end;
+  --bg-size: contain;
 
   @media (max-width: @size-tablete) {
     display           : block;
-    background-position: 50% 50% ;
-    // background-size: 900% 100% ;
+    --bg-y: 320px;
+    --bg-x: 50%;
+    --bg-size: 200vw;
     padding-top       : 87px;
     padding-bottom    : 0px;
+    
+   .title {
+      color: @black; 
+      
+      padding-left: 4.75%;
+      padding-right: 4.75%;}
   }
   
   &__arrow-right,
@@ -548,31 +556,28 @@ ul {
     width   : 14px;
     height  : 25px;
     position: absolute;
-    top     : 30vw;
+    top     : 30%;
     cursor  : pointer;
     z-index: 20;
   }
 
   &__arrow-left {
-    left     : 80px;
+    left     : 5vw;
     transform: rotate(180deg);
   }
 
   &__arrow-right {
-    right: 125px;
+    right: 7vw;
   }
 
   
   .title{  
-       
+    color:@white;   
     font-weight: bold;
-   
-    @media (min-width: @size-tablete){
-      color: @white; 
-      position: relative;
-      justify-self: start;
-      left:9.5%;
-    }
+    position: relative;
+    justify-self: start;
+    left:9.5%;
+    
   } 
   
   &__slider{
@@ -599,6 +604,12 @@ ul {
   
   &__img{
     grid-area: img;
+    @media (max-width: @size-tablete){
+      width: 66%;
+      height:auto;
+      align-self: center;
+      justify-self: center;
+    }
   }
   
   &__title-box{
