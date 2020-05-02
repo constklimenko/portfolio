@@ -334,6 +334,26 @@
     <div class="command__arrow-left "></div>
     <div class="command__arrow-right "></div>
   </section>
+  
+  <section class="reviews">
+    <h2 class="title">Отзывы наших клиентов</h2>
+    <div class="reviews__slider">
+      <article class="review-card">
+        <div class="reviews-card__title"></div>
+        <div class="reviews-card__img"></div>
+        <div class="reviews-card__stars">
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+        </div>
+        <div class="review-card__text"></div>
+        <div class="review-card__arrow-down"></div>
+      </article>
+      
+    </div>
+  </section>
 
   <script>
     function toggleNav() {
@@ -386,6 +406,19 @@
         lazyLoad: 'ondemand',
         
       });
+      
+      if (window.matchMedia("(max-width: 1200px)").matches) {
+        $('.reviews__slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        arrows: false,
+        dots: true,
+        fade: true,
+        // lazyLoad: 'ondemand',
+        
+      });
+} 
     });
   </script>
 

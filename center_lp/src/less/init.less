@@ -634,6 +634,36 @@ ul {
 }
 
 /* command  ends*/
+
+/* reviews */
+.reviews{
+  .block(13.5%, 0);
+  grid( 1fr, 45px auto 45px, 20px,90px);
+  &__slider{
+    .flex-row;
+    
+  }
+  
+  &-card {
+    height: 480px;
+    width: 365px;
+    .flex-col;
+    
+    &__title{
+      font-size: 16px;
+    }
+    
+    &__img{
+      
+    }
+    
+    &__stars{
+      
+    }
+  }
+}
+
+/* reviews  ends*/
 .m-show {
   @media (min-width: @size-mobile + 1) {
     display: none!important;
