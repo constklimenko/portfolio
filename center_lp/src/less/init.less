@@ -637,8 +637,10 @@ ul {
 
 /* reviews */
 .reviews{
-  .block(13.5%, 0);
-  .grid(1fr, 45px auto 45px, 0, 90px);
+  .block(9%, 0);
+  .grid(1fr, 43px auto 40px, 0, 90px);
+  justify-items: center;
+  padding-top: 130px;
   
   &__slider{
     
@@ -651,11 +653,14 @@ ul {
     
   }
   
-  &-card {
+  &__card {
     height: 480px;
     width: 365px;
     position: relative;
-    .flex-col;
+    
+    .grid(1fr, auto auto 25px auto,0, 15px);
+    justify-items: center;
+    
     
     &__title{
       font-size: 16px;
@@ -663,22 +668,25 @@ ul {
     
     &__img{
       width: 120px;
-height: 120px;
-border-radius: 50%;
+      height: 120px;
+      border-radius: 50%;
     }
     
     &__stars{
-      .grid(repeat(5, 1fr));
+      .grid(repeat(5, 25px),auto,8px);
     }
     
     &__text{
       max-width: 100vw;
+      padding: 10%;
     }
   }
 }
 
 .star{
-  
+  width: 25px;
+  height: 25px;
+  .bg-contain('img/star.svg');
 }
 
 /* reviews  ends*/
