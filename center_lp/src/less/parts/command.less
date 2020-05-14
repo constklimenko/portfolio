@@ -8,20 +8,7 @@
   align-items: end;
   --bg-size: contain;
 
-  @media (max-width: @size-tablete) {
-    display           : block;
-    --bg-y: 320px;
-    --bg-x: 50%;
-    --bg-size: 200vw;
-    padding-top       : 87px;
-    padding-bottom    : 0px;
-    
-   .title {
-      color: @black; 
-      
-      padding-left: 4.75%;
-      padding-right: 4.75%;}
-  }
+  
   
   &__arrow-right,
   &__arrow-left {
@@ -52,6 +39,7 @@
     left:9.5%;
     
   } 
+  
   
   &__slider{
     .block(9.5%, 0);
@@ -102,7 +90,22 @@
     }
   }
   
-  
+  @media (max-width: @size-tablete) {
+    display           : block;
+    --bg-y: 320px;
+    --bg-x: 50%;
+    --bg-size: 200vw;
+    padding-top       : 87px;
+    padding-bottom    : 0px;
+    
+   .title {
+      color: @black; 
+      margin:0;
+      left:0;
+      padding-left: 4.75%;
+      padding-right: 4.75%;
+    }
+  }
   
 }
 
