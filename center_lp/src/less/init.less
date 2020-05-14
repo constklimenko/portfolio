@@ -2,6 +2,9 @@
 @import (reference) "parts/bootstrap";
 @import "parts/mixins";
 
+@import "slick/slick";
+@import "slick/slick-theme";
+
 
 html {
   .clear();
@@ -14,6 +17,10 @@ html {
   bottom    : 0;
 }
 
+a{
+  color: currentColor;
+}
+
 .txt-36 {
   .font-xxl;
 
@@ -21,6 +28,8 @@ html {
     .font-m;
   }
 }
+
+
 
 .txt-32 {
   .font-xl;
@@ -146,7 +155,7 @@ ul {
   .bg-contain('img/logo.png');
   align-self  : stretch;
   justify-self: stretch;
-
+  
 }
 
 @import "parts/nav";
@@ -156,7 +165,7 @@ ul {
 @import "parts/reviews";
 @import "parts/command";
 @import "parts/faq";
-
+@import "parts/footer";
 
 
 
