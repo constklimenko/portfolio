@@ -84,6 +84,7 @@ const ftp = require('vinyl-ftp');
 var config = {
     path: {
         less: 'center_lp/src/less/*.less',
+        less2: 'center_lp/src/less/parts/*.less',
         html: 'center_lp/public/index.html',
 
     },
@@ -138,7 +139,8 @@ gulp.task('serve', (done) => {
             baseDir: config.output.path
         }
     });
-    gulp.watch(config.path.less, gulp.series('less')); //, 'push', 'pushCss'));
+    gulp.watch(config.path.less, gulp.series('less'));
+    gulp.watch(config.path.less2, gulp.series('less')); //, 'push', 'pushCss'));
     gulp.watch(config.path.html).on('change', () => {
         browserSync.reload();
         done();
