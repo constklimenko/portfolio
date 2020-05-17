@@ -132,6 +132,21 @@ input {
   }
 }
 
+.icon-before(@url){
+  display:inline-block;
+  content:" ";
+  width:1em;
+  height:1em;
+  margin-right: 0.5em;
+  .bg-contain(@url); 
+  position:relative;
+  top:0.2em;
+}
+
+.clock:before{.icon-before('img/clock.svg')}
+.tel:before{.icon-before('img/phone.svg')}
+.location:before{.icon-before('img/location.svg')}
+
 .title {
   .txt-32;
   text-align: center;
@@ -167,7 +182,7 @@ ul {
 @import "parts/faq";
 @import "parts/footer";
 @import "parts/form";
-
+@import "parts/adress";
 
 
 
