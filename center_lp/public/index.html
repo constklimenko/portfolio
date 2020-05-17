@@ -42,9 +42,9 @@
   <nav class="nav">
     <a href="/" class="logo"></a>
 
-    <a href="" class="nav__link m-hide">Портфолио</a>
+    <a href="#projects" class="nav__link m-hide">Портфолио</a>
     <a href="" class="nav__link m-hide">Виды услуг</a>
-    <a href="" class="nav__link m-hide">Калькулятор</a>
+    <a href="#contact" class="nav__link m-hide">Калькулятор</a>
     <a href="" class="nav__link m-hide">Контакты</a>
     <a href="" class="nav__phone"> +7 (905) 824 85 64 </a>
 
@@ -55,7 +55,7 @@
     </div>
 
     <div class="nav__bottom m-show  m-hide">
-      <a href="" class="nav__link ">Портфолио</a>
+      <a href=".projects" class="nav__link ">Портфолио</a>
       <a href="" class="nav__link ">Виды услуг</a>
       <a href="" class="nav__link ">Калькулятор</a>
       <a href="" class="nav__link ">Контакты</a>
@@ -87,7 +87,7 @@
     </div>
   </section>
 
-  <section class="projects">
+  <section class="projects" id="projects">
     <h2 class="title">Посмотрите наши <br>
       <strong>лучшие проекты 2019</strong>
     </h2>
@@ -286,18 +286,19 @@
 
   </section>
   
-  <section class="contact">
-    <form class="contact__form" id="contact-form_1" method="POST" enctype="multipart/form-data">
+  <section class="contact" id="contact">
+    <form class="contact__form contact-form " id="contact-form_1" method="POST" enctype="multipart/form-data">
       <div class="contact__text title"><nowrap> Понравились&nbsp;наши&nbsp;работы?</nowrap></div>
-      <div class="contact__text subtitle">Получите расчёт <nowrap>стоимости дизайн-проекта</nowrap> за час
+      <div class="contact__text subtitle contact-form__description">Получите расчёт <nowrap>стоимости дизайн-проекта</nowrap> за час
         <div class="contact-form__error contact-form__error_tel"></div>
-        <div class="contact-form__error contact-form__error_name"></div>
+        <div class="contact-form__error contact-form__error_name"></div></div>
       <input type="text" name="name" placeholder="Имя" class="contact__name contact-form__input_name ">
       <input name="tel" type="tel" placeholder="Номер телефона" class="contact__phone contact-form__input_tel">
-      <button class="button">Хочу рассчет</button>
+      <button class="button contact-form__button" type="submit">Хочу рассчет</button>
       <div class="circle circle1"></div>
       <div class="circle circle2"></div>
       <div class="circle circle3"></div>
+  
       
     </form>
     
@@ -477,6 +478,8 @@
       document.querySelector('.nav__bottom').classList.toggle('m-hide');
 
     }
+    
+     
   </script>
   
   <script>
@@ -548,6 +551,27 @@
       });
 } 
     });
+    
+  </script>
+  
+  <script>
+    /* Scroll to Block 
+                   ===================  */
+                   $(document).ready(function () {
+      $("nav").on("click", "a", function (event) {
+        event.preventDefault();
+
+        if ($(this).attr('href').indexOf("#") == 0) {
+          var id = $(this).attr('href'),
+            top = $(id).offset().top + 0;
+          $('body,html').animate({
+            scrollTop: top
+          }, 1000);
+
+        } else {
+          document.location.href = $(this).attr('href');
+        }
+      });});
   </script>
 
 </body>

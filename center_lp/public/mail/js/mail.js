@@ -54,7 +54,7 @@
 				}
 
 				if (respond.success) {
-					window.location.replace("/thank-you-page.php?status=success"); 
+					// window.location.replace("/thank-you-page.php?status=success"); 
 				}
 			},
 		});
