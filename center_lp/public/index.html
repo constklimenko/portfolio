@@ -287,17 +287,19 @@
   </section>
   
   <section class="contact">
-    <div class="contact__form">
+    <form class="contact__form" id="contact-form_1" method="POST" enctype="multipart/form-data">
       <div class="contact__text title"><nowrap> Понравились&nbsp;наши&nbsp;работы?</nowrap></div>
-      <div class="contact__text subtitle">Получите расчёт <nowrap>стоимости дизайн-проекта</nowrap> за час</div>
-      <input type="text" placeholder="Имя" class="contact__name">
-      <input type="text" placeholder="Номер телефона" class="contact__phone">
+      <div class="contact__text subtitle">Получите расчёт <nowrap>стоимости дизайн-проекта</nowrap> за час
+        <div class="contact-form__error contact-form__error_tel"></div>
+        <div class="contact-form__error contact-form__error_name"></div>
+      <input type="text" name="name" placeholder="Имя" class="contact__name contact-form__input_name ">
+      <input name="tel" type="tel" placeholder="Номер телефона" class="contact__phone contact-form__input_tel">
       <button class="button">Хочу рассчет</button>
       <div class="circle circle1"></div>
       <div class="circle circle2"></div>
       <div class="circle circle3"></div>
       
-    </div>
+    </form>
     
   </section>
   
@@ -489,6 +491,9 @@
   <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="slick/slick.min.js"></script>
+  
+  
+  <script src="/mail/js/mail.js"></script>
 
   <script>
     $(document).ready(function () {
