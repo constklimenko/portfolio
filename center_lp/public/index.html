@@ -5,13 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta author="narcomacer@gmail.com">
   <title>Centr LP</title>
-  <!-- <link rel="stylesheet" type="text/css" href="slick/slick.css" />
- <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>  -->
+
 
   <link rel="stylesheet" href="center_lp.css">
 
-  <!-- Pixel Glass -->
+  <!-- Pixel Glass 
 
   <style>
     HTML {
@@ -34,7 +34,7 @@
   </style>
   <link href="/pixel-glass/styles.css" rel="stylesheet">
   <script src="/pixel-glass/script.js"></script>
-  <!-- // Pixel Glass -->
+   // Pixel Glass -->
 </head>
 
 <body>
@@ -287,20 +287,19 @@
   </section>
   
   <section class="contact" id="contact">
-    <form class="contact__form contact-form " id="contact-form_1" method="POST" enctype="multipart/form-data">
+    <div class="contact__form contact-form " id="contact-form_1" data-tema="Хочу рассчёт" >
       <div class="contact__text title"><nowrap> Понравились&nbsp;наши&nbsp;работы?</nowrap></div>
       <div class="contact__text subtitle contact-form__description">Получите расчёт <nowrap>стоимости дизайн-проекта</nowrap> за час
-        <div class="contact-form__error contact-form__error_tel"></div>
-        <div class="contact-form__error contact-form__error_name"></div></div>
+        </div>
       <input type="text" name="name" placeholder="Имя" class="contact__name contact-form__input_name ">
       <input name="tel" type="tel" placeholder="Номер телефона" class="contact__phone contact-form__input_tel">
-      <button class="button contact-form__button" type="submit">Хочу рассчет</button>
+      <button class="button contact-form__button" onclick="SimpleMailer(this);">Хочу рассчет</button>
       <div class="circle circle1"></div>
-      <div class="circle circle2"></div>
+      <div class="circle circle2"></div> 
       <div class="circle circle3"></div>
   
       
-    </form>
+    </div>
     
   </section>
   
@@ -505,33 +504,20 @@
     
   </section>
   
-  <div class="form-wrapper">
-
-    <form class="contact-form" id="contact-form_2" method="POST" enctype="multipart/form-data">
-        <p class="contact-form__title">Оставьте заявку на расчет стоимости</p>
-        <p class="contact-form__description"></p>
-        <div class="contact-form__input-wrapper">
-            <input name="name" type="text" class="contact-form__input contact-form__input_name"
-                placeholder="Введите ваше имя">
-            <div class="contact-form__error contact-form__error_name"></div>
+  <section class="brief contact" id="brief">
+    <div class="contact__form contact-form " id="contact-form_2" data-tema="Получить анкету" >
+      <div class="contact__text title"><nowrap> Опишите вашу задачу в простой анкете</nowrap></div>
+      <div class="contact__text subtitle contact-form__description"> <nowrap>Хотите заполнить?</nowrap> 
         </div>
-        
-        <div class="contact-form__input-wrapper">
-            <input name="tel" type="tel" class="contact-form__input contact-form__input_tel"
-                placeholder="Введите ваш телефон">
-            <div class="contact-form__error contact-form__error_tel"></div>
-        </div>
-
-        <div class="contact-form__input-wrapper"> 
-            <input name="email" type="email" class="contact-form__input contact-form__input_email"
-                placeholder="Введите ваш email">
-            <div class="contact-form__error contact-form__error_email"></div>
-        </div>
-
-        <button class="contact-form__button" type="submit"> Получить прайс </button>
-    </form>
+      <input type="text" name="name" placeholder="Имя" class="contact__name contact-form__input_name ">
+      <input name="tel" type="tel" placeholder="Номер телефона" class="contact__phone contact-form__input_tel">
+      <button class="button contact-form__button" onclick="SimpleMailer(this);">Получить анкету</button>
+      
+  
+      
+    </div>
     
-</div>
+  </section>
   
   
   <section class="adress" id="adress">
@@ -546,6 +532,10 @@
     
     
   </section>
+  
+  
+ 
+  
   
   <footer class="footer">
     <div class="footer__logo"><a href="/" class="logo">
@@ -597,8 +587,10 @@
   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="slick/slick.min.js"></script>
   
+
   
-  <script src="/mail/js/mail.js"></script>
+ <script src="js/simple-mailer.js"></script>
+  
 
   <script>
     $(document).ready(function () {
