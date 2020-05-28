@@ -5,6 +5,7 @@
   .vertical-grid-dif(300px auto auto, 50px);
   position   : relative;
   align-items: end;
+  
 
   @media (max-width: @size-tablete) {
     display           : block;
@@ -17,6 +18,8 @@
     position  : absolute;
     grid-row  : ~"2/3";
     align-self: start;
+    @media(min-width: @viewport-max + 14px){  width: 100vw;}
+  
   }
 
   &__arrow-right,
@@ -41,6 +44,10 @@
   &__slider {
     .block(9.5%, 0);
     grid-row: ~"2/3";
+    @media(min-width: @viewport-max + 14px){
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   &__slider-nav {
@@ -49,16 +56,21 @@
   }
 
   &__grid {
-    .grid(46vw 32vw, 478px auto, 30px, 35px) !important;
+    .grid(~"min(46vw, 662px)  min(32vw, 461px)", 478px auto, 30px, 35px) !important;
     width: 100%;
+    max-width: 1440px;
+    margin: auto;
 
     &--nav {
       grid-template-rows: minmax(478px, auto) 142px;
+      max-width: 1440px;
+      margin: auto;
     }
   }
 
   &__img {
     width        : 100%;
+    max-width: 662px;
     height       : auto;
    
   }

@@ -33,10 +33,11 @@
   .circle1 {
     .r-size(320px,320 ,1440 , 40px, 40, 100);
     
-    width : var(--return);
-    height: var(--return);
-    top: calc(-1.8 * var(--return));
-    left: calc(-0.2 * var(--return));
+    width :clamp(40px,var(--return), 100px) ;
+    height: clamp(40px,var(--return), 100px);
+    
+    top: ~"clamp(-72px, -1.8 * var(--return), -180px)";
+    left: ~"clamp(-8px,-0.2 * var(--return),-20px)";
     @media (max-width: @size-mobile){        
         top: -20.5vw;
         left: -8.5vw;
@@ -46,20 +47,20 @@
   .circle2 {
     .r-size(320px,320 ,1440 , 20px, 20, 62);
     
-    width : var(--return);
-    height: var(--return);  
+    width :clamp(20px,var(--return), 62px) ;
+    height: clamp(20px,var(--return), 62px);  
     
-    left: calc(2 * var(--return));
-    top:calc(-1.9 * var(--return));
+    left: ~"clamp(40px,2 * var(--return), 124px)";
+    top:~"clamp(-38px,-1.9 * var(--return), -120px)";
   }
   .circle3 {
     .r-size(320px,320 ,1440 , 23px, 23, 45);
     
-    width : var(--return);
-    height: var(--return);
+    width : clamp(23px,var(--return), 45px);
+    height: clamp(23px,var(--return), 45px);
     
-    bottom: calc(-2.4 * var(--return));
-    right: calc(0.5 * var(--return));
+    bottom:~"clamp(-55px,-2.4 * var(--return), -108px)" ;
+    right: ~"clamp(12px,0.5 * var(--return), 23px)" ;
 
   }
   
