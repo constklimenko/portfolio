@@ -8,13 +8,13 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="1440"
-   height="1042.53"
-   viewBox="0 0 1440 1042.53"
+   height="280.46924"
+   viewBox="0 0 1440 280.46924"
    version="1.1"
    id="svg18"
-   sodipodi:docname="projects-back.svg"
-   style="fill:none"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+   sodipodi:docname="projects-back2.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   style="fill:none">
   <metadata
      id="metadata22">
     <rdf:RDF>
@@ -40,17 +40,16 @@
      inkscape:window-height="480"
      id="namedview20"
      showgrid="false"
-     inkscape:zoom="0.16990205"
-     inkscape:cx="-641.41817"
-     inkscape:cy="653.61812"
+     inkscape:zoom="0.48055556"
+     inkscape:cx="391.49018"
+     inkscape:cy="56.997625"
      inkscape:window-x="69"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg18" />
   <path
-     d="m 1440,160.912 c 0,0 0,0 -60,20.114 -60,20.114 -181.31,51.948 -300,46.933 C 932.499,221.727 840,147.503 720,120.684 600,93.8655 480,107.275 360,93.8655 240,80.4561 120,40.2281 60,20.114 L 0,0 v 1042.53 h 60 c 60,0 180,0 300,0 120,0 240,0 360,0 120,0 240,0 360,0 120,0 240,0 300,0 h 60 z"
-     id="path4"
-     inkscape:connector-curvature="0"
-     style="fill:#ffa046;" />
+     d="m 1440,212.89 c 0,0 0,0 -60,20.12 -60,20.11 -181.31,51.95 -300,46.93 C 932.499,273.71 840,199.49 720,172.67 600,145.85 498.856,168.81 360,145.85 240.682,126.12 120,92.21 60,72.1 L 0,51.98 V 0 h 60 c 60,0 180,0 300,0 120,0 240,0 360,0 120,0 240,0 360,0 120,0 240,0 300,0 h 60 z"
+     id="path2"
+style="fill:#ffa046;"    inkscape:connector-curvature="0" />
   
 </svg>
