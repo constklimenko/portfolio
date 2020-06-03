@@ -39,7 +39,7 @@
 
 <body>
 
-  <nav class="nav">
+  <nav class="nav scroll">
     <a href="/" class="logo"></a>
 
     <a href="#projects" class="nav__link m-hide">Портфолио</a>
@@ -69,10 +69,10 @@
       </h2>
       <div class="first__text-small">Создаем дизайн-проект интерьера под ключ для квартир, <nobr>домов и коммерческих
         </nobr> помещений в Тюмени и области </div>
-      <div class="first__buttons">
-        <button class="button">Хочу рассчет</button>
-        <a href="" class="first__link"> Посмотреть портфолио </a>
-      </div>
+        <div class="first__buttons scroll">
+          <button href="#contact" class="button">Хочу рассчет</button>
+          <a href="#projects" class="first__link"> Посмотреть портфолио </a>
+        </div>
       <div class="first__grid t-hide">
         <div class="first__grid__title">7 лет</div>
         <div class="first__grid__title">51260 м<sup>2</sup></div>
@@ -652,20 +652,64 @@
     /* Scroll to Block 
                    ===================  */
                    $(document).ready(function () {
-      $("nav").on("click", "a", function (event) {
+     
+      $(".scroll").on("click", "a", function (event) {
         event.preventDefault();
 
-        if ($(this).attr('href').indexOf("#") == 0) {
-          var id = $(this).attr('href'),
-            top = $(id).offset().top - 30;
-          $('body,html').animate({
-            scrollTop: top
-          }, 1000);
-
-        } else {
+        if ($(this).parent(".nav__bottom") != undefined) {
           document.location.href = $(this).attr('href');
+          document.querySelector('.nav__bottom').classList.toggle('m-hide');
+        } else {
+
+          if ($(this).attr('href').indexOf("#") == 0) {
+            var id = $(this).attr('href'),
+              top = $(id).offset().top - 30;
+            $('body,html').animate({
+              scrollTop: top
+            }, 1000);
+
+          } else {
+            document.location.href = $(this).attr('href');
+          }
         }
-      });});
+      
+      });
+    }
+
+
+
+    );
+
+
+
+
+  </script>
+  
+  <script>
+    $(document).ready(function () {
+      $(".scroll").on("click", "button", function (event) {
+        event.preventDefault();
+
+        
+
+          if ($(this).attr('href').indexOf("#") == 0) {
+            var id = $(this).attr('href'),
+              top = $(id).offset().top - 30;
+            $('body,html').animate({
+              scrollTop: top
+            }, 1000);
+
+          } else {
+            document.location.href = $(this).attr('href');
+          }
+        
+      });
+    }
+
+
+
+    );
+
   </script>
 
 </body>
