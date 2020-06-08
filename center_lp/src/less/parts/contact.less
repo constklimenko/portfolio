@@ -8,6 +8,7 @@
   margin     : auto;
   padding-top: 70px;
   padding-bottom: 100px;
+  margin-top: 20px
   ;
 
 
@@ -18,9 +19,10 @@
   }
 
   &__form {
-    .grid(1f 1fr 1.1fr, 1fr 1fr 1fr,30px,23px);
+    .grid(1fr 1fr 1.1fr, 1fr 1fr 1fr,30px,23px);
     position: relative;
     align-items: end;
+    align-content: center;
    
   }
 
@@ -41,8 +43,8 @@
       width :clamp(40px,var(--return), 100px) ;
     height: clamp(40px,var(--return), 100px);
     
-    top: ~"clamp(-72px, -1.8 * var(--return), -180px)";
-    left: ~"clamp(-8px,-0.2 * var(--return),-20px)";
+    top: ~"clamp(-180px, -1.8 * var(--return), -72px)";
+    left: ~"clamp(-20px,-0.2 * var(--return),-8px)";
     }
     @media (max-width: @size-mobile){        
         top: -20.5vw;
@@ -60,7 +62,7 @@
     width :clamp(20px,var(--return), 62px) ;
     height: clamp(20px,var(--return), 62px);  
     left: ~"clamp(40px,2 * var(--return), 124px)";
-    top:~"clamp(-38px,-1.9 * var(--return), -120px)";
+    top:~"clamp(-120px,-1.9 * var(--return), -32px)";
   }}
   .circle3 {
     .r-size(320px,320 ,1440 , 23px, 23, 45);
@@ -71,7 +73,7 @@
     @supports (width:min(40px, 100px) ){width : clamp(23px,var(--return), 45px);
       height: clamp(23px,var(--return), 45px);
      
-      bottom:~"clamp(-55px,-2.4 * var(--return), -108px)" ;
+      bottom:~"clamp(-108px,-2.4 * var(--return), -55px)" ;
       right: ~"clamp(12px,0.5 * var(--return), 23px)" ;}
     
 
