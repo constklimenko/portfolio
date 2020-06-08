@@ -8,11 +8,11 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="1440"
-   height="324.836"
-   viewBox="0 0 1440 324.836"
+   height="124.328"
+   viewBox="0 0 1440 124.328"
    version="1.1"
    id="svg18"
-   sodipodi:docname="blue-bg.svg"
+   sodipodi:docname="blue-bg2.svg"
    style="fill:none"
    inkscape:version="0.92.3 (2405546, 2018-03-11)">
   <metadata
@@ -42,16 +42,16 @@
      showgrid="false"
      inkscape:zoom="0.23888889"
      inkscape:cx="720"
-     inkscape:cy="99.003"
+     inkscape:cy="224.167"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg18" />
   <path
-     d="m 0,22.502001 80.4,14.3969 c 79.2,14.3968 240,23.1906 399.6,8.7937 159.6,-14.3969 320.4,-51.9843097 480,-44.78587673 159.6,7.19842703 244.35,35.23447673 399.6,65.17487673 31.43,6.062 80.4,15.9922 80.4,15.9922 V 324.836 h -80.4 c -79.2,0 -240,0 -399.6,0 -159.6,0 -320.4,0 -480,0 -159.6,0 -320.4,0 -399.6,0 H 0 Z"
-     id="path2"
+     d="m 0,64.756 80.4,14.397 c 79.2,14.397 240,23.191 399.6,8.794 159.6,-14.397 320.4,-51.984 480,-44.786 159.6,7.198 244.35,35.234 399.6,65.175 31.43,6.062 80.4,15.992 80.4,15.992 V 0 h -80.4 C 1280.4,0 1119.6,0 960,0 800.4,0 639.6,0 480,0 320.4,0 159.6,0 80.4,0 H 0 Z"
+     id="path4"
      inkscape:connector-curvature="0"
-     style="clip-rule:evenodd;fill:url(#paint0_linear);fill-rule:evenodd" />
+     style="clip-rule:evenodd;fill:url(#paint1_linear);fill-rule:evenodd" />
   <defs
      id="defs16">
     <linearGradient
@@ -60,8 +60,7 @@
        y1="89.833397"
        x2="481.43301"
        y2="783.75"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(0,1.2721227e-6)">
+       gradientUnits="userSpaceOnUse">
       <stop
          stop-color="#2795F9"
          id="stop6" />
@@ -76,7 +75,8 @@
        y1="89.833397"
        x2="481.43301"
        y2="783.75"
-       gradientUnits="userSpaceOnUse">
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0,-324.839)">
       <stop
          stop-color="#2795F9"
          id="stop11" />
