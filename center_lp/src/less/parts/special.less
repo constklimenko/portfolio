@@ -1,0 +1,78 @@
+
+
+/*special   */
+
+.special {
+ 
+  .block(9.5%, 0);
+  &__block{
+    .grid(1fr 1fr, auto, minmax(10vw,140px));
+  grid-template-areas:"text img";
+  align-items: center;
+  margin-bottom: 20px;
+   
+  @media (max-width: @size-mobile){
+    display: block;
+  }
+  
+  
+  &--invert{
+    grid-template-areas:"img text";
+  }
+  }
+  
+  &__img{
+    grid-area: img;
+    width:100% ;
+    height: 25vw;
+    
+    &--1{
+      .bg-contain("img/calendar.svg")
+    }
+    
+    &--2{
+      .bg-contain("img/brainstorming.svg")
+    }
+    &--3{
+      .bg-contain("img/facts.svg")
+    }
+   
+  }
+  
+  &__text{
+    grid-area: text;
+    .txt-20;
+  }
+  
+  
+}
+
+/*special ends   */
+
+.important{
+  color:@orange;
+}
+
+.quote {
+ 
+  display: block;
+  .grid(1fr 6fr 1fr);
+  align-items: center;
+  
+  &:after{
+    content:" ";
+    display: block;
+    .bg-contain("img/quote1.svg");
+    width: 2em;
+    height: 2em;
+  }
+  
+  &:before{
+    content:" ";
+    display: block;
+    .bg-contain("img/quote1.svg");
+    width: 2em;
+    height: 2em;
+    transform: rotate(180deg);
+  }
+}
