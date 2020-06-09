@@ -14,104 +14,27 @@ const browserSync = require('browser-sync').create();
 const ftp = require('vinyl-ftp');
 
 
+const pathName = 'center_lp';
 
 
 
-// var config = {
-//     path: {
-//         less: './src/less/*.less',
-//         html: '.public/index.html',
-
-//     },
-//     output: {
-//         cssName: 'bundle.min.css',
-//         path: './public',
-//         path_file: './public/index.html',
-//         path_file_css: './public/bundle.min.css',
-//         newHtml: '/tmp/fz3temp-2'
-//     }
-// }
-
-// info card
-// var config = {
-//     path: {
-//         less: 'info_card/src/less/*.less',
-//         html: 'info_card/public/index.html',
-
-//     },
-//     output: {
-//         cssName: 'bundle.min.css',
-//         path: 'info_card/public',
-//         path_file: 'info_card/public/index.html',
-//         path_file_css: 'info_card/public/bundle.min.css',
-//         newHtml: '/tmp/fz3temp-2'
-//     }
-// }
-
-// лендинг 2
-// var config = {
-//     path: {
-//         less: 'land2/src/less/*.less',
-//         html: 'land2/public/l2-index.html',
-
-//     },
-//     output: {
-//         cssName: 'l2-bundle.min.css',
-//         path: 'land2/public',
-//         path_file: 'land2/public/l2-index.html',
-//         path_file_css: 'land2/public/l2-bundle.min.css',
-//         newHtml: '/tmp/fz3temp-2'
-//     }
-// }
-
-// лендинг 3
-// var config = {
-//     path: {
-//         less: 'land3/src/less/*.less',
-//         html: 'land3/public/l3-index.html',
-
-//     },
-//     output: {
-//         cssName: 'l3-bundle.min.css',
-//         path: 'land3/public',
-//         path_file: 'land3/public/l3-index.html',
-//         path_file_css: 'land3/public/l3-bundle.min.css',
-//         newHtml: '/tmp/fz3temp-2'
-//     }
-// }
-
-// test
-var config = {
+const config = {
     path: {
-        less: 'center_lp/src/less/*.less',
-        less2: 'center_lp/src/less/parts/*.less',
-        html: 'center_lp/public/index.html',
+        less: `${pathName}/src/less/*.less`,
+        less2: `${pathName}/src/less/parts/*.less`,
+        html: `${pathName}/public/index.html`,
 
     },
     output: {
-        cssName: 'center_lp.css',
-        path: 'center_lp/public',
-        path_file: 'center_lp/public/index.html',
-        path_file_css: 'center_lp/public/center_lp.css',
-        newHtml: '/tmp/fz3temp-2'
+        cssName: `${pathName}.css`,
+        path: `${pathName}/public`,
+        path_file: `${pathName}/public/index.html`,
+        path_file_css: `${pathName}/public/${pathName}.css`,
+        newHtml: `/tmp/fz3temp-2`
     }
 }
 
 
-// var config = {
-//     path: {
-//         less: 'bs/src/less/*.less',
-//         html: 'bs/public/index.html',
-
-//     },
-//     output: {
-//         cssName: 'bundle.min.css',
-//         path: 'bs/public',
-//         path_file: 'bs/public/index.html',
-//         path_file_css: 'land2/public/bundle.min.css',
-//         newHtml: '/tmp/fz3temp-2'
-//     }
-// }
 
 gulp.task('less', function () {
     return gulp.src(config.path.less)
