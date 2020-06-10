@@ -6,6 +6,10 @@
   justify-items: center;
   padding-top: 130px;
   position: relative;
+  @media (max-width: @size-tablete){
+    row-gap: 10px;
+    padding-top: 30px;
+  }
   &__links{
     height: 45px;
     width:254px;
@@ -26,6 +30,7 @@
     padding-top:40px;
     @media (max-width: @size-tablete){
       grid-template-columns: 1fr;
+      padding-top:0px;
      }
     
   .slick-dots{
