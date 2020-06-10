@@ -1,4 +1,27 @@
 .first{
+  position: sticky;
+  top:0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(to right, rgb(161, 88, 146) -100%, silver 100%);
+  &__title{
+    position: absolute;
+    z-index: 2;
+    top:0.5em;
+    left: 1em;
+    color:white;
+    font-weight: 700;
+    text-shadow: 0.1em 0.1em 0.1em @dark_gray;
+    
+  }
+  &__bg{
+    width: 150%;
+  height: 150%;
+  border-top: solid 3px blue;
   
+    transform: translateX(-400px) rotate(-14deg);
+    .bg-cover('img/first/highway.jpg');
   
+  }
 }

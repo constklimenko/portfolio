@@ -15,7 +15,7 @@ html {
   left      : 0;
   right     : 0;
   bottom    : 0;
-  background-color: linear-gradient(to right, skyblue -50%, silver 150%);
+  background: linear-gradient(to right, skyblue -50%, silver 150%);
 }
 
 a{
@@ -85,6 +85,12 @@ body {
   color      : @black;
 
 
+}
+
+.h1{
+  font-family: @font-h1;
+  .txt-36;
+  
 }
 
 // .button {
@@ -179,6 +185,7 @@ ul {
 
 @import "parts/first";
 
+@import "parts/nav";
 
 .m-show {
   @media (min-width: @size-mobile + 1) {
@@ -208,9 +215,7 @@ ul {
   justify-items: center;
 }
 
-.politic {
-  .block();
-}
+
 
 .hex{ border: 0px solid red;
   width:100px;
