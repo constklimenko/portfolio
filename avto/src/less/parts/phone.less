@@ -1,0 +1,44 @@
+
+.phone{
+  position: fixed;
+  z-index: 14;
+  bottom:2em;
+  right: 2em;
+  width: max-content;
+  height: auto;
+  color: white;
+  .title;
+  
+  @media(max-width:1000px){
+    right:~" calc(50% - 4em)";
+    bottom:2.5em;
+  }
+  
+  @media(max-width:600px){
+    bottom: 20%;
+    font-size: 32px;
+    background-color: rgba(38, 197, 136, 0.5);
+    border: 5px double white;
+    padding:0.3em;
+    right:~" calc(50% - 4.2em)";
+  }
+  a, span {
+    text-shadow: 2px 2px 2px blueviolet;
+    
+    &:hover{
+      text-decoration: none;
+      color:white;
+      font-weight: 900;
+    }
+    
+    &:before {
+      display: inline-block;
+      content: " ";
+      width: 1em;
+      height: 1em;
+      margin-right: .5em;
+      background: url(img/first/phone.svg) no-repeat center/contain;
+      position: relative;
+      top: .2em;
+  }}
+}

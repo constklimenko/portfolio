@@ -30,10 +30,13 @@
     height: 150%;
     border-top: solid 3px blue;
   
-    transform: translateX(-400px) rotate(-14deg);
+    transform: translateX(-400px) rotate(-7deg);
     .bg-cover('img/first/highway.jpg');
+    
   
   }
+  
+  
   
   &__form{
     position: absolute;
@@ -51,6 +54,13 @@
     
     & input{
       justify-self: center;
+    }
+  }
+  
+  @media(max-width: 600px){
+    .bg-cover('img/first/highway.jpg');
+    &__bg{
+      display: none;
     }
   }
 }

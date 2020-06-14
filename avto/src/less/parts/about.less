@@ -4,18 +4,51 @@
   &:extend(.sticky-block);
   padding: 2em;
   
+  &__slide{
+    
+    &__text {
+      .txt-18;
+      float: right;width: 50%;
+      padding: 12% 9% 0%;   
+      
+    }
+    img{float: left;width: 50%;
+    height: 100%;}
+    
+      
+    @media(max-width:600px){
+      
+      width: 100%;
+    &__text, &__img{float: none; width: 100vw;
+      height: auto; clear: both }
+    
+    
+     }
+    
+    
+    
+  }
+  
   &__slider{
-    width: 150%;
-    height: 500px;
-    border: solid 3px blue;
-  background-color: @blue;
-    transform: translateX(-400px) rotate(-14deg);
+    width: 120%;
+    height: 350px;
+    border: solid 3px white;
+  background-color: transparent;
+    transform: translateX(-10%) rotate(7deg);
     overflow: hidden;
+    @media(max-width:600px){
+      border: none;
+      height: 60vh;
+      transform: translateX(-8%) rotate(0deg);
+    }
     &__in{
-      width: 150%;
-    height: 100vh;
-      transform: translateY(50px)  rotate(14deg);
-      .bg-cover('img/first/highway.jpg');
+      width: 95%;
+    height: 110vh;
+      transform: translateY(-29px)  rotate(-7deg);
+      
+      @media(max-width:600px){
+        transform: translateY(5%) rotate(0deg);
+      }
     }
   }
 }

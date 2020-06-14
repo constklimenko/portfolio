@@ -21,11 +21,11 @@
     <div class="nav__block nav__block--3"><a href="" class="nav__link">Контакты</a> </div>
   </nav>
   <div class="phone">
-    <span class="m-hide" >8(987)0166063</span>
-    
+    <span class="m-hide">8(987)0166063</span>
+
     <a class="m-show" href="tel:+79870166063">8(987)0166063</a>
   </div>
-  
+
   <header class="first" id="first">
 
 
@@ -35,7 +35,7 @@
     <h1 class="h1 first__title">Paint resident</h1>
 
 
-     
+
 
 
 
@@ -66,10 +66,15 @@
 
 
     <div class="about__slider">
-       <div class="about__slider__in">
-         
-        
-       </div>
+      <div class="about__slider__in">
+        <div class="about__slide "><img class="about__img" src="img/first/highway2.jpg" alt="">
+          <div class="about__slide__text"><p>luptates reprehenderit sit nemo in molestias et officia? Deserunt molestiae perspiciatis laboriosam corrupti dolorem modi incidunt, placeat quibusdam.</p></div>
+          </div>
+        <div class="about__slide "><img class="about__img" src="img/first/highway3.jpg" alt=""><div class="about__slide__text"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid nam necessitatibus dicta voluptates reprehenderit sit nemo in molestias et officia? Deserunt molestiae perspiciatis laboriosam corrupti dolorem modi incidunt, placeat quibusdam.</p></div>
+          </div>
+
+
+      </div>
     </div>
 
 
@@ -80,7 +85,7 @@
 
 
 
-    
+
 
 
 
@@ -98,6 +103,25 @@
 
 
   <script src="js/simple-mailer.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('.about__slider__in').slick({
+        slidesToShow: 1,
+        autoplay: true,
+        autoplaySpeed: 10000,
+        slidesToScroll: 1,
+        infinite: true,
+        arrows: true,
+        prevArrow: '.about__arrow-left',
+        nextArrow: '.about__arrow-right',
+        fade: true
+        // lazyLoad: 'ondemand',
+        
+      });
+    });
+
+  </script>
 
 </body>
 
