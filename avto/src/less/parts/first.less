@@ -1,10 +1,16 @@
-.first{
+.sticky-block{
   position: sticky;
   top:0;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
   background: linear-gradient(to right, rgb(161, 88, 146) -100%, silver 100%);
+}
+
+.first{
+  &:extend(.sticky-block);
+  padding: 2em;
+  
   &__title{
     position: absolute;
     z-index: 2;
@@ -15,13 +21,26 @@
     text-shadow: 0.1em 0.1em 0.1em @dark_gray;
     
   }
+  
+  
+  
+  
   &__bg{
     width: 150%;
-  height: 150%;
-  border-top: solid 3px blue;
+    height: 150%;
+    border-top: solid 3px blue;
   
     transform: translateX(-400px) rotate(-14deg);
     .bg-cover('img/first/highway.jpg');
   
+  }
+  
+  &__form{
+    position: absolute;
+    --p: 1em;
+    top: var(--p);left: var(--p);bottom: var(--p);
+    right: var(--p);
+    
+    border:5px double  white;
   }
 }
