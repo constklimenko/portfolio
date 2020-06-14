@@ -14,10 +14,10 @@
   &__title{
     position: absolute;
     z-index: 2;
-    top:0.5em;
+    top:1em;
     left: 1em;
     color:white;
-    font-weight: 700;
+    font-weight: 800;
     text-shadow: 0.1em 0.1em 0.1em @dark_gray;
     
   }
@@ -37,10 +37,20 @@
   
   &__form{
     position: absolute;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    background-color: rgba(0,0,0,0.3);
     --p: 1em;
     top: var(--p);left: var(--p);bottom: var(--p);
     right: var(--p);
     
     border:5px double  white;
+    .grid(1fr,repeat(5,55px),0, 20px);
+    justify-items: center;
+    padding-top: 75px;
+    
+    & input{
+      justify-self: center;
+    }
   }
 }

@@ -1,5 +1,5 @@
 .nav {
-  position: sticky;
+  position: fixed;
  
   bottom: 58vh;
  
@@ -12,52 +12,72 @@
   &__link{
     color: white;
     border: 3px solid white;
+    border-radius: 4%;
     padding: 0.5em;
     text-shadow: 2px 2px 2px black;
     
     &:hover{
       color: white;
       font-weight: 600;
+      background-color: rgba(38, 197, 136, 0.5);
+      text-decoration: none;
     }
   }
+  
+@media(max-width: 999px){
+  width:max-content;
+  min-width: 200px;
+  .grid(repeat(5, minmax(0,max-content)), auto, 20px);
+  position: fixed;
+  bottom:3em;
+  left:calc(50% - 170px);
+}
 
 
 
   &__block {
-    position: absolute;
-    top     : 0;
-    width   : 12vw;
-    height  : 12vw;
-    min-width   : 150px;
-    min-height  : 150px;
-    .grid(1fr);
-    justify-items: center;
-    align-items: center;
-    mask        : url('/img/first/hexagon.svg');
-    -webkit-mask: url('/img/first/hexagon.svg') top left / cover;
     
-    transition: all 1s;
     
-    &:hover{
-      width   : 12.5vw;
-    height  : 12.5vw;
-      filter: brightness(110%);
+    @media(min-width: 1000px){
+      position: absolute;
+      top     : 0;
+      width   : 12vw;
+      height  : 12vw;
+      min-width   : 130px;
+      min-height  : 130px;
+      .grid(1fr);
+      justify-items: center;
+      align-items: center;
+      mask        : url('/img/first/hexagon.svg');
+      -webkit-mask: url('/img/first/hexagon.svg') top left / cover;
+      
+      transition: all 1s;
+      
+      &:hover{
+        width   : 12.5vw;
+      height  : 12.5vw;
+        filter: brightness(110%);
+      }
+      
+      &--1 {
+        .bg-cover('/img/first/cosplay.jpg');
+      }
+      
+      &--2 {
+        .bg-cover('/img/first/car.jpg');
+        left: 12vw;
+      }
+      
+      &--3 {
+        .bg-cover('/img/first/highway2.jpg');
+        left: 6vw;
+        top: 10vw;
+      }
     }
+    
+    
     
 
-    &--1 {
-      .bg-cover('/img/first/cosplay.jpg');
-    }
     
-    &--2 {
-      .bg-cover('/img/first/car.jpg');
-      left: 12vw;
-    }
-    
-    &--3 {
-      .bg-cover('/img/first/highway2.jpg');
-      left: 6vw;
-      top: 10vw;
-    }
   }
 }

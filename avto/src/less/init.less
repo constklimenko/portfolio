@@ -84,7 +84,6 @@ body {
   font-family: @font-family;
   color      : @black;
 
-
 }
 
 .h1{
@@ -93,30 +92,33 @@ body {
   
 }
 
-// .button {
-//   display: block;
-//   width           : 265px;
-//   height          : 50px;
-//   border-radius   : 50px;
-//   background-color: @orange;
-//   color           : @white;
-//   text-align      : center;
-//   vertical-align: middle;
-//   cursor          : pointer;
-//   margin: auto;
-
-//   @media (max-width: @size-mobile) {
-//     width : 250px;
-//     height: 40px;
-//   }
-// }
+.button {
+  display: block;
+  width           : 265px;
+  height          : 50px;
+  border-radius   : 50px;
+  background-color: transparent;
+  color           : @white;
+  text-align      : center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 5px double white;
+  margin: auto;
+  .txt-24;
 
 
+  @media (max-width: @size-mobile) {
+    width : 250px;
+    height: 40px;
+  }
+}
 
-// .button:hover {
-//   box-shadow      : 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(255, 102, 0, 0.12), 0px 4px 8px rgba(255, 102, 0, 0.18);
-//   background-color: darken(@orange, 1%);
-// }
+
+
+.button:hover {
+  box-shadow      : 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(255, 102, 0, 0.12), 0px 4px 8px rgba(255, 102, 0, 0.18);
+  background-color: rgba(38, 197, 136, 0.5);
+}
 
 img{
   border-radius: 5px;
