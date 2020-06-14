@@ -3,4 +3,19 @@
 .about{
   &:extend(.sticky-block);
   padding: 2em;
+  
+  &__slider{
+    width: 150%;
+    height: 500px;
+    border: solid 3px blue;
+  background-color: @blue;
+    transform: translateX(-400px) rotate(-14deg);
+    overflow: hidden;
+    &__in{
+      width: 150%;
+    height: 100vh;
+      transform: translateY(50px)  rotate(14deg);
+      .bg-cover('img/first/highway.jpg');
+    }
+  }
 }
