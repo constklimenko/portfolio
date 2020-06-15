@@ -15,10 +15,10 @@
 </head>
 
 <body>
-  <nav class="nav scroll">
-    <div class="nav__block nav__block--1"><a href="#about" class="nav__link">О нас</a> </div>
-    <div class="nav__block nav__block--2"><a href="" class="nav__link">Услуги</a> </div>
-    <div class="nav__block nav__block--3"><a href="" class="nav__link">Контакты</a> </div>
+  <nav class="nav ">
+    <div class="nav__block nav__block--1 scroll"><a href="#about" class="nav__link">О нас</a> </div>
+    <div class="nav__block nav__block--2 scroll"><a href="" class="nav__link">Услуги</a> </div>
+    <div class="nav__block nav__block--3 scroll"><a href="" class="nav__link">Контакты</a> </div>
   </nav>
   <div class="phone">
     <span class="m-hide">8(987)0166063</span>
@@ -152,6 +152,49 @@
 
       });
     });
+
+  </script>
+  
+  <script>
+    /* Scroll to Block 
+                   ===================  */
+    $(document).ready(function () {
+
+      $(".scroll").on("click", "a", function (event) {
+        event.preventDefault();
+        console.log(`function  works`);
+
+        if ($(this).parent(".nav") == undefined) {
+          console.log(`function mobile  works`);
+          console.log(` parent(navbottom) =${$(this).parent()}`);
+          document.location.href = $(this).attr('href');
+          document.querySelector('.nav__bottom').classList.toggle('m-hide');
+        } else {
+          console.log(`else works`);
+
+          if ($(this).attr('href').indexOf("#") == 0) {
+
+            var id = $(this).attr('href'),
+              top = $(id).offset().top ;
+            console.log(`animation works`);
+            $('body,html').animate({
+              scrollTop: top
+            }, 1000);
+
+          } else {
+            document.location.href = $(this).attr('href');
+          }
+        }
+
+      });
+    }
+
+
+
+    );
+
+
+
 
   </script>
 
