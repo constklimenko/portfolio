@@ -4,6 +4,15 @@
   &:extend(.sticky-block);
   padding: 2em;
   
+  &__form{
+    width: 200px;
+    margin:auto;
+    .grid(1fr,repeat(3, 1fr),0, 10px);
+    @media(max-width:1000px){
+      display: none;
+    }
+  }
+  
   &__slide{
     
     &__text {

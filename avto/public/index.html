@@ -34,9 +34,11 @@
 
     <h1 class="h1 first__title">Paint resident</h1>
 
+<div class="social">
+  <a href="" class="vk"></a>
+</div>
 
-
-
+    <div class="first__mobile-title">Покраска автомобиля в&nbsp;Уфе. </div>
 
 
     <div class="first__form contact-form m-hide " id="contact-form_1" data-tema="Хочу рассчёт">
@@ -67,11 +69,29 @@
 
     <div class="about__slider">
       <div class="about__slider__in">
-        <div class="about__slide "><img class="about__img" src="img/first/highway2.jpg" alt="">
-          <div class="about__slide__text"><p>luptates reprehenderit sit nemo in molestias et officia? Deserunt molestiae perspiciatis laboriosam corrupti dolorem modi incidunt, placeat quibusdam.</p></div>
+        <div class="about__slide "><img class="about__img" data-lazy="img/about/car.jpg" alt="">
+          <div class="about__slide__text">
+            <p>Мы предлагаем покраску автомобилей и их элементов, детальную полировку. Полировку фар, покрытие защитой.
+            </p>
           </div>
-        <div class="about__slide "><img class="about__img" src="img/first/highway3.jpg" alt=""><div class="about__slide__text"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid nam necessitatibus dicta voluptates reprehenderit sit nemo in molestias et officia? Deserunt molestiae perspiciatis laboriosam corrupti dolorem modi incidunt, placeat quibusdam.</p></div>
+        </div>
+
+        <div class="about__slide "><img class="about__img" data-lazy="img/about/1.jpg" alt="">
+          <div class="about__slide__text">
+            <p>Идеальное качество при доступной цене!</p>
           </div>
+        </div>
+        <div class="about__slide "><img class="about__img" data-lazy="img/about/team.jpg" alt="">
+          <div class="about__slide__text">
+            <p>Наши профессионалы любят свою работу.</p>
+          </div>
+        </div>
+        <div class="about__slide "><img class="about__img" data-lazy="img/about/2.jpg" alt="">
+          <div class="about__slide__text">
+            <p>Так же проводим капремонт двигателей ВАЗ </p>
+          </div>
+        </div>
+
 
 
       </div>
@@ -81,7 +101,13 @@
     <h1 class="h1 first__title">О нас</h1>
 
 
+    <div class="about__form contact-form m-hide " id="contact-form_2" data-tema="Хочу рассчёт">
+      
+  
 
+      <input type="text" name="name" placeholder="Имя" class="form__name contact-form__input_name ">
+      <input name="tel" type="tel" placeholder="Номер телефона" class="form__phone contact-form__input_tel">
+      <button class="button contact-form__button" onclick="SimpleMailer(this);">Записаться</button>
 
 
 
@@ -109,15 +135,15 @@
       $('.about__slider__in').slick({
         slidesToShow: 1,
         autoplay: true,
-        autoplaySpeed: 10000,
+        autoplaySpeed: 6000,
         slidesToScroll: 1,
         infinite: true,
         arrows: true,
         prevArrow: '.about__arrow-left',
         nextArrow: '.about__arrow-right',
-        fade: true
-        // lazyLoad: 'ondemand',
-        
+        fade: true,
+        lazyLoad: 'ondemand',
+
       });
     });
 
