@@ -87,13 +87,16 @@ body {
 }
 
 .button {
+  display: block;
   width           : 265px;
   height          : 50px;
   border-radius   : 50px;
   background-color: @orange;
   color           : @white;
   text-align      : center;
+  vertical-align: middle;
   cursor          : pointer;
+  margin: auto;
 
   @media (max-width: @size-mobile) {
     width : 250px;
@@ -189,6 +192,16 @@ ul {
 @import "parts/facts";
 @import "parts/addition";
 
+#contact3{
+  display: none;
+  margin-bottom: 50px;
+  &:target{
+    display: block;
+  }
+}
+
+
+
 .m-show {
   @media (min-width: @size-mobile + 1) {
     display: none!important;
@@ -209,6 +222,12 @@ ul {
 
 .span {
   grid-column: span 3;
+}
+
+.button-centred{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
 }
 
 .politic {
