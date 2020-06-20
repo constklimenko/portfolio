@@ -14,7 +14,7 @@ const browserSync = require('browser-sync').create();
 const ftp = require('vinyl-ftp');
 
 
-const pathName = 'avto';
+const pathName = 'center_lp';
 
 
 
