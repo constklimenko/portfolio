@@ -1,79 +1,83 @@
 .nav {
   position: fixed;
- 
-  bottom: 58vh;
- 
-  z-index: 4;
-  display: block;
-  width: 24vw;
-  height: 20vh;
+
+  bottom: 28vh;
+
+  z-index    : 4;
+  display    : block;
+  width      : 24vw;
+  height     : 20vh;
   margin-left: 5vw;
-  
-  &__link{
-    color: white;
-    border: 3px solid white;
+
+  &__link {
+    color        : white;
+    border       : 3px solid white;
     border-radius: 4%;
-    padding: 0.5em;
-    text-shadow: 2px 2px 2px black;
-    
-    &:hover{
-      color: white;
-      font-weight: 600;
+    padding      : 0.5em;
+    text-shadow  : 2px 2px 2px black;
+
+    &:hover {
+      color           : white;
+      font-weight     : 600;
       background-color: rgba(38, 197, 136, 0.5);
-      text-decoration: none;
+      text-decoration : none;
     }
   }
-  
-@media(max-width: 999px){
-  width:100vw;
 
-  .grid(repeat(5, minmax(0,max-content)), auto, 3vw);
-  position: fixed;
-  bottom:1em;
-  left:~"calc(50% - 11em)";
-}
+  @media(max-width: 999px) {
+    width : 100vw;
+    height: 5vh;
+
+    .grid(repeat(3, minmax(0, max-content)), auto, 3vw);
+    position: fixed;
+    bottom  : 5vh;
+    left    : ~"calc(50% - 11em)";
+  }
 
 
 
   &__block {
-    
-    
-    @media(min-width: 1000px){
-      position: absolute;
-      top     : 0;
-      width   : 12vh;
-      height  : 12vh;
-      min-width   : 130px;
-      min-height  : 130px;
+
+
+    @media(min-width: 1000px) {
+      position  : absolute;
+      top       : 0;
+      width     : 12vh;
+      height    : 12vh;
+      min-width : 130px;
+      min-height: 130px;
       .grid(1fr);
       justify-items: center;
-      align-items: center;
-      mask        : url('/img/first/hexagon.svg');
-      -webkit-mask: url('/img/first/hexagon.svg') top left / cover;
-      
+      align-items  : center;
+      border-radius: 50%;
+
+      @supports(mask:url('img/first/hexagon.svg')) or (-webkit-mask: url('img/first/hexagon.svg') ) {
+        mask        : url('img/first/hexagon.svg');
+        -webkit-mask: url('img/first/hexagon.svg') top left / cover;
+      }
+
       transition: all 1s;
-      
-      &:hover{
-        width   : 12.5vw;
-      height  : 12.5vw;
-        filter: brightness(110%);
+
+      &:hover {
+        transform: scale(1.1);
+        filter   : brightness(110%);
       }
-      
+
       &--1 {
-        .bg-cover('/img/first/cosplay.jpg');
+        .bg-cover('img/first/cosplay.jpg');
       }
-      
+
       &--2 {
-        .bg-cover('/img/first/car.jpg');
-        left: 12vw;
+        .bg-cover('img/first/car.jpg');
+        left: 11vw;
       }
-      
+
       &--3 {
-        .bg-cover('/img/first/index.jpg');
-        left: 6vw;
-        top: 10vw;
+        .bg-cover('img/first/index.jpg');
+        left: 5.5vw;
+        top : 9vw;
       }
-    }    
-        
+    }
+
   }
 }
