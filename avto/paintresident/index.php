@@ -14,43 +14,82 @@
 
 get_header();
 ?>
+<!-- main -->
+	
 
-	<main id="primary" class="site-main">
 
-		<?php
-		if ( have_posts() ) :
+    <section class="about " id="about">
 
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
 
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+        <div class="about__slider">
+            <div class="about__slider__in">
+                <div class="about__slide "><img class="about__img" data-lazy="img/about/car.jpg" alt="">
+                    <div class="about__slide__text">
+                        <p>Мы предлагаем покраску автомобилей и их элементов, детальную полировку. Полировку фар, покрытие защитой.
+                        </p>
+                    </div>
+                </div>
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+                <div class="about__slide "><img class="about__img" data-lazy="img/about/1.jpg" alt="">
+                    <div class="about__slide__text">
+                        <p>Идеальное качество при доступной цене!</p>
+                    </div>
+                </div>
+                <div class="about__slide "><img class="about__img" data-lazy="img/about/team.jpg" alt="">
+                    <div class="about__slide__text">
+                        <p>Наши профессионалы любят свою работу.</p>
+                    </div>
+                </div>
+                <div class="about__slide "><img class="about__img" data-lazy="img/about/2.jpg" alt="">
+                    <div class="about__slide__text">
+                        <p>Так же проводим капремонт двигателей ВАЗ </p>
+                    </div>
+                </div>
 
-			endwhile;
 
-			the_posts_navigation();
 
-		else :
+            </div>
+        </div>
 
-			get_template_part( 'template-parts/content', 'none' );
 
-		endif;
-		?>
+        <h1 class="h1 first__title">О нас</h1>
 
-	</main><!-- #main -->
+
+        <div class="about__form contact-form m-hide " id="contact-form_2" data-tema="Хочу рассчёт">
+
+
+
+            <input type="text" name="name" placeholder="Имя" class="form__name contact-form__input_name ">
+            <input name="tel" type="tel" placeholder="Номер телефона" class="form__phone contact-form__input_tel">
+            <button class="button contact-form__button" onclick="SimpleMailer(this);">Записаться</button>
+
+
+
+
+
+
+
+
+
+
+    </section>
+
+
+    <section class="adress">
+
+        <div class="adress__frame">
+            <div class="adress__frame__in">
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A91ce3989db1c2984b1b8884d761fcf470f09f3879d3bb826336b2f102fc69132&amp;width=578&amp;height=400&amp;lang=ru_RU&amp;scroll=true">
+                </script>
+            </div>
+        </div>
+
+
+
+
+    </section>
+		
+<!-- #main -->
 
 <?php
 get_sidebar();
