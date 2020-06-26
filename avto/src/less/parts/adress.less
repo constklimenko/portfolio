@@ -1,0 +1,28 @@
+.adress{
+  &:extend(.sticky-block);
+  padding: 2em;
+  
+  &__frame{
+    width: 120%;
+    height: 350px;
+    border: solid 3px white;
+  background-color: transparent;
+    transform: translateX(-10%) rotate(7deg);
+    overflow: hidden;
+    @media(max-width:600px){
+      border: none;
+      height: 60vh;
+      transform: translateX(-8%) rotate(0deg);
+    }
+    &__in{
+      width: 95%;
+    height: 110vh;
+      transform: translateY(-29px)  rotate(-7deg);
+      
+      @media(max-width:600px){
+        transform: translateY(5%) rotate(0deg);
+      }
+    }
+  }
+  
+}

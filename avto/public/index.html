@@ -39,14 +39,14 @@
 
 
 
-    <div class="first__mobile-title">Покраска автомобиля в&nbsp;Уфе. </div>
+    <div class="first__mobile-tih2">Покраска автомобиля в&nbsp;Уфе. </div>
 
 
     <div class="first__form contact-form m-hide " id="contact-form_1" data-tema="Хочу рассчёт">
-      <div class="contact__text title">
+      <h2 class=" title">
         <nowrap> Покраска&nbsp;автомобиля в&nbsp;Уфе</nowrap>
-      </div>
-      <div class="contact__text subtitle contact-form__description">Оставьте свой <nowrap>номер телефона,
+      </h2>
+      <div class=" subtitle contact-form__description">Оставьте свой <nowrap>номер телефона,
         </nowrap>и мы с вами свяжемся
       </div>
 
@@ -124,6 +124,13 @@
   
   <section class="adress">
     
+    <div class="adress__frame">
+      <div class="adress__frame__in"><script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A91ce3989db1c2984b1b8884d761fcf470f09f3879d3bb826336b2f102fc69132&amp;width=578&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script></div>
+    </div>
+    
+    
+    
+    
   </section>
 
 
@@ -197,6 +204,43 @@
 
 
   </script>
+  
+  <script>function addHandler(object, event, handler, useCapture) {
+    if (object.addEventListener) {
+        object.addEventListener(event, handler, useCapture ? useCapture : false);
+    } else if (object.attachEvent) {
+        object.attachEvent('on' + event, handler);
+    } else alert("Add handler is not supported");
+}
+
+
+// Добавляем обработчики
+/* Gecko */
+window.MouseEvent.onMove(addHandler(window, 'DOMMouseScroll', wheel));
+/* Opera */
+window.MouseEvent.onMove(addHandler(window, 'mousewheel', wheel));
+/* IE */
+window.MouseEvent.onMove(addHandler(document, 'mousewheel', wheel));
+// Обработчик события
+function wheel(event) {
+    var delta; // Направление скролла
+    // -1 - скролл вниз
+    // 1  - скролл вверх
+    event = event || window.event;
+    // Opera и IE работают со свойством wheelDelta
+    if (event.wheelDelta) {
+        delta = event.wheelDelta / 120;
+        // В Опере значение wheelDelta такое же, но с противоположным знаком
+        if (window.opera) delta = -delta;
+    // В реализации Gecko получим свойство detail
+    } else if (event.detail) {
+        delta = -event.detail / 3;
+    }
+    // Запрещаем обработку события браузером по умолчанию
+    if (event.preventDefault)  event.preventDefault();
+    event.returnValue = false;
+     return delta;
+}</script>
 
 </body>
 
