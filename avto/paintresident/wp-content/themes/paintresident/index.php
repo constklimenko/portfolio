@@ -73,6 +73,15 @@ get_header();
 
 
     </section>
+    
+    <section class="gallery" id="gallery">
+    <h1 class="h1 first__title">Галерея</h1>
+    <div class="gallery__box">
+    <?php echo do_shortcode( '[nggallery id=1]' ) ?>
+    </div>
+    
+
+    </section>
 
 
     <section class="adress">
@@ -92,5 +101,5 @@ get_header();
 <!-- #main -->
 
 <?php
-get_sidebar();
+
 get_footer();
