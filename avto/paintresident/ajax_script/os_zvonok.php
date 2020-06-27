@@ -15,7 +15,7 @@ $headers .= "From:Centr LP \r\n";
 // $headers .= "Reply-To: narcomacer@gmail.com\r\n";
 // mail($to, $subject, $message, $headers, '-f 2@centrlp.ru');
  mail($to2, $subject, $message, $headers, '-f narcomacer@gmail.com');
-echo '<div class="contact__text title">Спасибо за заявку! <br>Скоро мы с вами свяжемся.</div>
+echo '<div class="contact__response title">Спасибо за заявку! <br>Скоро мы с вами свяжемся.</div>
 ';
 }
 
