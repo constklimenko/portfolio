@@ -87,8 +87,13 @@ a{
 body {
   font-family: @font-family;
   color      : @black;
+ 
 
 }
+
+.body-not-sticky ~ section{
+  position: relative!important;
+  }
 
 .h1{
   font-family: @font-h1;
@@ -140,8 +145,7 @@ input {
   border: none;
   box-shadow:none;
   box-shadow      : 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(255, 102, 0, 0.12), 0px 4px 8px rgba(255, 102, 0, 0.18);
-  
- 
+   
   @media (max-width: @size-mobile) {
     width : 250px;
     height: 40px;
@@ -194,6 +198,16 @@ section:target{
   top: 0;z-index: 2;
 }
 
+
+.sticky-block{
+  position: sticky;
+  top:0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(to right, rgb(161, 88, 146) -100%, silver 100%);
+}
+
 @import "parts/first";
 
 @import "parts/nav";
@@ -234,16 +248,16 @@ section:target{
 
 
 
-.hex{ border: 0px solid red;
-  width:100px;
-  height: 100px;
-  background: url('img/avatar2.png') no-repeat/cover;
-  mask: url('img/hexagon.svg');
-  -webkit-mask: url('img/hexagon.svg') top left / cover;
-  transition: border 1s;
-}
+// .hex{ border: 0px solid red;
+//   width:100px;
+//   height: 100px;
+//   background: url('img/avatar2.png') no-repeat/cover;
+//   mask: url('img/hexagon.svg');
+//   -webkit-mask: url('img/hexagon.svg') top left / cover;
+//   transition: border 1s;
+// }
 
-.hex:hover{ border: -6px solid red;
-  filter: saturate(110%) brightness(110%);
+// .hex:hover{ border: -6px solid red;
+//   filter: saturate(110%) brightness(110%);
  
- }
+//  }

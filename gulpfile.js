@@ -91,4 +91,4 @@ gulp.task('avto', function() {
         .pipe(gulp.dest(config2.output_path));
 });
 
-gulp.task('default', gulp.series('less', 'avto'));
+gulp.task('default', gulp.series('less', 'avto', 'serve'));
