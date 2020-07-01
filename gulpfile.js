@@ -35,9 +35,9 @@ const config = {
 }
 
 const config2 = {
-    path_1: `${pathName}/public/1.css`,
-    path_css: `${pathName}/public/avto.css`,
-    output_path: `${pathName}/paintresident/wp-content/themes/paintresident/style.css`
+    path_1: `${pathName}/public/*.css`,
+    name_css: `style.css`,
+    output_path: `${pathName}/paintresident/wp-content/themes/paintresident`
 }
 
 
@@ -87,8 +87,8 @@ const globs = [
 
 gulp.task('avto', function() {
     return gulp.src(config2.path_1)
-        .pipe(concat(config2.path_css))
-        .pipe(gulp.dest('./avto/paintresident/wp-content/themes/paintresident/style.css'));
+        .pipe(concat(config2.name_css))
+        .pipe(gulp.dest(config2.output_path));
 });
 
-gulp.task('default', gulp.series('less', 'serve'));
+gulp.task('default', gulp.series('less', 'avto'));

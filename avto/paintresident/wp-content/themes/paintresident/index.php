@@ -88,8 +88,18 @@ get_header();
 
         <div class="adress__frame">
             <div class="adress__frame__in">
-                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A91ce3989db1c2984b1b8884d761fcf470f09f3879d3bb826336b2f102fc69132&amp;width=578&amp;height=400&amp;lang=ru_RU&amp;scroll=true">
+                
+            <div class="adress__map m-hide">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A91ce3989db1c2984b1b8884d761fcf470f09f3879d3bb826336b2f102fc69132&amp;width=578&amp;height=400&amp;lang=ru_RU&amp;scroll=true">
                 </script>
+            </div>
+            
+            <div class="adress__text"> <p>Мы находимся по адресу:
+                <p><? // TODO ?></p>
+            </p> 
+                
+            </div>
+                
             </div>
         </div>
 

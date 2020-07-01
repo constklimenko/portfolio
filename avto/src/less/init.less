@@ -20,6 +20,10 @@ html {
 
 a{
   color: currentColor;
+  &:hover{
+    color: currentColor;
+    text-decoration: none;
+  }
 }
 
 .txt-36 {
@@ -184,6 +188,10 @@ ul {
   align-self  : stretch;
   justify-self: stretch;
   
+}
+
+section:target{
+  top: 0;z-index: 2;
 }
 
 @import "parts/first";

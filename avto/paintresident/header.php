@@ -27,8 +27,9 @@
 	
 <nav class="nav ">
         <div class="nav__block nav__block--1 scroll"><a href="#about" class="nav__link">О нас</a> </div>
-        <div class="nav__block nav__block--2 scroll"><a href="/paint_resident/" class="nav__link">Главная</a> </div>
-        <div class="nav__block nav__block--3 scroll"><a href="" class="nav__link">Контакты</a> </div>
+        <div class="nav__block nav__block--2 scroll"><a href="#first" class="nav__link">Главная</a> </div>
+        <div class="nav__block nav__block--3 scroll"><a href="#adress" class="nav__link">Контакты</a> </div>
+        <div class="nav__block nav__block--4 scroll"><a href="#gallery" class="nav__link">Галерея</a> </div>
 </nav>
 <div class="phone">
         <span class="m-hide">8(987)0166063</span>
