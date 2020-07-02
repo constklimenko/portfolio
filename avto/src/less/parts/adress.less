@@ -31,7 +31,17 @@
     
     &__text{
       float: right;
+      height: 40vh;
       width: 50%;
+      vertical-align: middle;
+      text-align: center;
+      .flex-col;
+      @media(max-width:600px){
+        float:none;
+        width: 100%;
+        height:100vh;
+      }
+      
     }
   }
   

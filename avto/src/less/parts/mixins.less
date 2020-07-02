@@ -394,6 +394,20 @@ a:not([href]):not([tabindex]):focus {
   -webkit-flex-wrap     : wrap;
   -ms-flex-wrap         : wrap;
   flex-wrap             : wrap;
+  align-content: center;
+}
+
+.flex-col() {
+  display               : -ms-flexbox;
+  display               : -webkit-flex;
+  display               : flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction    : column;
+  flex-direction        : column;
+  -webkit-flex-wrap     : wrap;
+  -ms-flex-wrap         : wrap;
+  flex-wrap             : wrap;
+  justify-content: center;
 }
 
 .flex_item(@width) {
