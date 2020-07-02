@@ -31,21 +31,23 @@
 
                 $(".scroll").on("click", "a", function(event) {
                     event.preventDefault();
-                    console.log(`function  works`);
+                    
 
                     if ($(this).parent(".nav") == undefined) {
-                        console.log(`function mobile  works`);
-                        console.log(` parent(navbottom) =${$(this).parent()}`);
+                       
                         document.location.href = $(this).attr('href');
                         document.querySelector('.nav__bottom').classList.toggle('m-hide');
                     } else {
-                        console.log(`else works`);
+                      
 
                         if ($(this).attr('href').indexOf("#") == 0) {
 
-                            var id = $(this).attr('href'),
-                                top = $(id).offset().top;
-                            console.log(`animation works`);
+                            
+                            document.body.classList.toggle('body-not-sticky');
+                           
+                            window.scrollTo(0,0); document.body.classList.toggle('body-not-sticky');
+                            var id = $(this).attr('href'),          top = $(id).offset().top;     
+                          
                             $('body,html').animate({
                                 scrollTop: top
                             }, 1000);

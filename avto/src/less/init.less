@@ -86,7 +86,7 @@ a{
 
 body {
   font-family: @font-family;
-  color      : @black;
+  color      : @basic-font-color;
  
 
 }
@@ -205,7 +205,7 @@ section:target{
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background: linear-gradient(to right, rgb(161, 88, 146) -100%, silver 100%);
+  background: linear-gradient(to right, @gradient-color-left -30%, @gradient-color-right 130%);
 }
 
 @import "parts/first";
