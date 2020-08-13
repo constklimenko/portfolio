@@ -14,7 +14,7 @@ const browserSync = require('browser-sync').create();
 const ftp = require('vinyl-ftp');
 
 
-const pathName = 'avto';
+const pathName = 'center_lp';
 
 
 
@@ -91,4 +91,5 @@ gulp.task('avto', function() {
         .pipe(gulp.dest(config2.output_path));
 });
 
-gulp.task('default', gulp.series('less', 'avto', 'serve'));
+// gulp.task('default', gulp.series('less', 'avto', 'serve'));
+gulp.task('default', gulp.series('less', 'serve'));
